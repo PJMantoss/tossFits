@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Page() {
+function Page({ children }) {
   return (
-    <Page>I am the Page</Page>
+    <Page>
+        {children}
+    </Page>
   )
 }
 
