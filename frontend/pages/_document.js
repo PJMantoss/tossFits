@@ -3,9 +3,9 @@ import Document, { Html } from 'next/document';
 export class MyDocument extends Document {
   render() {
     return (
-      <Html>MyDocument</Html>
+      <Html></Html>
     )
   }
 }
 
-export default MyDocument
+export default MyDocument;
