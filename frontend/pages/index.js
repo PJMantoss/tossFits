@@ -1,8 +1,11 @@
 import React from 'react';
+import Page from '../components/Page';
 
 function index() {
   return (
-    <div>Hello!</div>
+    <Page>
+      <h1>Hello!</h1>
+    </Page>
   )
 }
 
