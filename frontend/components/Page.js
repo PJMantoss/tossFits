@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Header from './Header';
 
 function Page({ children, cool }) {
   return (
     <Page>
-      <h3>{cool}</h3>
+      <Header />
+      <h1>I am the Page Component</h1>
         {children}
     </Page>
   )
