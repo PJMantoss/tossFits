@@ -1,8 +1,10 @@
 import Page from "../components/Page";
 
-function theApp({ PageProps }) {
+function theApp({ Component, pageProps }) {
   return (
-    <div>_app</div>
+    <Page>
+        <Component {...pageProps} />
+    </Page>
   )
 }
 
