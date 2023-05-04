@@ -4,12 +4,12 @@ import Header from './Header';
 
 function Page({ children, cool }) {
   return (
-    <Page>
+    <div>
       <Header />
       <h1>I am the Page Component</h1>
       <h3>{cool}</h3>
         {children}
-    </Page>
+    </div>
   )
 }
 
