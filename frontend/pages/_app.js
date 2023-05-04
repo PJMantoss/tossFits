@@ -8,4 +8,4 @@ function theApp({ Component, pageProps }) {
   )
 }
 
-export default _app
+export default theApp;
