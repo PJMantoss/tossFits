@@ -12,7 +12,7 @@ function Page({ children, cool }) {
 
 Page.PropTypes = {
   cool: PropTypes.string,
-  children
+  children: PropTypes.any
 }
 
 export default Page
