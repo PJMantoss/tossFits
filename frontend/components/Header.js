@@ -1,10 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 
 function Header() {
   return (
     <header>
         <div className='bar'>
-            <a href='#'>Toss Fits</a>
+            <Link href='/'>Toss Fits</Link>
         </div>
 
         <div className='sub-bar'>
