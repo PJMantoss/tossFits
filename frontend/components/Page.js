@@ -7,6 +7,7 @@ function Page({ children, cool }) {
     <Page>
       <Header />
       <h1>I am the Page Component</h1>
+      <h3>{cool}</h3>
         {children}
     </Page>
   )
