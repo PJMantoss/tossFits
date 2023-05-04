@@ -1,9 +1,12 @@
-import Document, { Html } from 'next/document';
+import Document, { Html, Head, NextScript, Main } from 'next/document';
 
 export class MyDocument extends Document {
   render() {
     return (
-      <Html></Html>
+      <Html lang='en-US'>
+        <Head></Head>
+        
+      </Html>
     )
   }
 }
