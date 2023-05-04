@@ -3,9 +3,11 @@ import Page from '../components/Page';
 
 function index() {
   return (
-    <Page cool="Whoah!">
+    <>
       <h1>Hello!</h1>
-    </Page>
+      <code>Var</code>
+      <p>I'm a child element</p>
+    </>
   )
 }
 

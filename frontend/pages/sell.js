@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function sell() {
   return (
-    <div>sell</div>
+    <h2>I'm a Sell component</h2>
   )
 }
 

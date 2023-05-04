@@ -15,4 +15,4 @@ Page.PropTypes = {
   children: PropTypes.any
 }
 
-export default Page
+export default Page;
