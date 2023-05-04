@@ -2,7 +2,9 @@ import React from 'react';
 
 function Header() {
   return (
-    <h3>I am the Header</h3>
+    <header>
+        <div className='bar'></div>
+    </header>
   )
 }
 
