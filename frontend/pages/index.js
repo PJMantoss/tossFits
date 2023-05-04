@@ -3,7 +3,7 @@ import Page from '../components/Page';
 
 function index() {
   return (
-    <Page>
+    <Page cool="Whoah!">
       <h1>Hello!</h1>
     </Page>
   )
