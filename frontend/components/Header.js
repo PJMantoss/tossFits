@@ -4,6 +4,9 @@ import Nav from './Nav';
 import styled from 'styled-components';
 
 const Logo = styled.h1`
+  font-size: 4rem;
+  margin-left: 2rem;
+  z-index: 2; 
   background: red;
   a {
     color: white;
