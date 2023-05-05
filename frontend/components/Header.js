@@ -3,6 +3,10 @@ import Link from 'next/link';
 import Nav from './Nav';
 import styled from 'styled-components';
 
+const Logo = styled.h1`
+  background: red;
+`;
+
 function Header() {
   return (
     <header>
