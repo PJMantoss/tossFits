@@ -6,7 +6,9 @@ function Header() {
   return (
     <header>
         <div className='bar'>
-            <Link href='/'>Toss Fits</Link>
+            <Link href='/'>
+              <h2>Toss Fits</h2>
+            </Link>
         </div>
 
         <div className='sub-bar'>
