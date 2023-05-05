@@ -5,6 +5,9 @@ import styled from 'styled-components';
 
 const Logo = styled.h1`
   background: red;
+  a {
+    color: white;
+  }
 `;
 
 function Header() {
