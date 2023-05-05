@@ -14,9 +14,9 @@ function Header() {
   return (
     <header>
         <div className='bar'>
-            <Link href='/'>
-              <h2>Toss Fits</h2>
-            </Link>
+          <Logo>
+            <Link href='/'>Toss Fits</Link>
+          </Logo>
         </div>
 
         <div className='sub-bar'>
