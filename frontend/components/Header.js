@@ -19,7 +19,9 @@ const Logo = styled.h1`
 `;
 
 const HeaderStyles = styled.header`
-  background: red;
+  .bar {
+    border-bottom: 10px solid black;
+  }
 `;
 
 function Header() {
