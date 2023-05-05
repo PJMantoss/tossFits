@@ -12,6 +12,8 @@ const Logo = styled.h1`
   transform: skew(-7deg);
   a {
     color: white;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 `;
 
