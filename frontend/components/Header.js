@@ -19,6 +19,7 @@ const Logo = styled.h1`
 `;
 
 const HeaderStyles = styled.header`
+  background: red;
 `;
 
 function Header() {
