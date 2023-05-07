@@ -36,6 +36,10 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  a {}
+
+  a:hover {}
 `;
 
 function Page({ children, cool }) {
