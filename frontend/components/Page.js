@@ -47,7 +47,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const innerStyle = styled.div`
+const innerStyles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
   padding: 2rem;
@@ -60,7 +60,9 @@ function Page({ children, cool }) {
       <Header />
       <h1>I am the Page Component</h1>
       <h3>{cool}</h3>
+      <innerStyles>
         {children}
+      </innerStyles>
     </div>
   )
 }
