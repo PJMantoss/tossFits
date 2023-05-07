@@ -12,6 +12,8 @@ const GlobalStyles = createGlobalStyle`
     --lightGrey: #e1e1e1;
     --lightGray: var(--lightGrey);
     --offWhite: #ededed;
+    --maxWidth: 1000px;
+    --boxShadow: 0px 12px 24px rgba(0,0,0,0.09);
   }
 `;
 
