@@ -22,6 +22,11 @@ const GlobalStyles = createGlobalStyle`
     --offWhite: #ededed;
     --maxWidth: 1000px;
     --boxShadow: 0px 12px 24px rgba(0,0,0,0.09);
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 
   body {
