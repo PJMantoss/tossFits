@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
     --black: #393939;
     --grey: #3A3A3A;
     --gray: var(--grey);
+    --lightGrey: #e1e1e1;
+    --lightGray: var(--lightGrey);
     --offWhite: #ededed;
   }
 `;
