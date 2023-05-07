@@ -1,6 +1,11 @@
 import Document, { Html, Head, NextScript, Main } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export class MyDocument extends Document {
+  static getInitialProps({ renderPage }){
+    const sheet = new ServerStyleSheet;
+  }
+
   render() {
     return (
       <Html lang='en-US'>
