@@ -39,9 +39,12 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: var(--black);
   }
 
-  a:hover {}
+  a:hover {
+    text-decoration: underline;
+  }
 `;
 
 function Page({ children, cool }) {
