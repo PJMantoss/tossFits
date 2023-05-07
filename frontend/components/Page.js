@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
+    font-family: 'radnika_next', Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
   }
 `;
 
