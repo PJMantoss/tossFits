@@ -4,6 +4,9 @@ import Header from './Header';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'radnika_next';
+  }
   html {
     --red: #ff0000;
     --black: #393939;
