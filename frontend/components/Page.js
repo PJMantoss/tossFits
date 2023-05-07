@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
+
   html {
     --red: #ff0000;
     --black: #393939;
@@ -21,6 +22,10 @@ const GlobalStyles = createGlobalStyle`
     --offWhite: #ededed;
     --maxWidth: 1000px;
     --boxShadow: 0px 12px 24px rgba(0,0,0,0.09);
+  }
+
+  body {
+    font-family: Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
   }
 `;
 
