@@ -6,6 +6,10 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   html {
     --red: #ff0000;
+    --black: #393939;
+    --grey: #3A3A3A;
+    --gray: var(--grey);
+    --offWhite: #ededed;
   }
 `;
 
