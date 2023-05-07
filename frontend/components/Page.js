@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -46,6 +46,8 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: underline;
   }
 `;
+
+const innerStyle = styled.div``;
 
 function Page({ children, cool }) {
   return (
