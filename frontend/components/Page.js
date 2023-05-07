@@ -37,7 +37,9 @@ const GlobalStyles = createGlobalStyle`
     line-height: 2rem;
   }
 
-  a {}
+  a {
+    text-decoration: none;
+  }
 
   a:hover {}
 `;
