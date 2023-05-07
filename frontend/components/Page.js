@@ -47,7 +47,11 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const innerStyle = styled.div``;
+const innerStyle = styled.div`
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 2rem;
+`;
 
 function Page({ children, cool }) {
   return (
