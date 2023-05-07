@@ -31,6 +31,10 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'radnika_next', Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 `;
 
