@@ -4,6 +4,9 @@ import Header from './Header';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+  html {
+    --red: #ff0000;
+  }
 `;
 
 function Page({ children, cool }) {
