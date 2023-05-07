@@ -3,7 +3,8 @@ import { ServerStyleSheet } from 'styled-components';
 
 export class MyDocument extends Document {
   static getInitialProps({ renderPage }){
-    const sheet = new ServerStyleSheet;
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(App => props => sheet.collectStyles())
   }
 
   render() {
