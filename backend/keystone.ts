@@ -4,5 +4,5 @@ const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/keystone-to
 
 const sessionConfig = {
     maxAge: 60 * 60 * 24 * 365, // How long a user should stay signed-in
-    secret: 
+    secret: process.env.COOKIE_SECRET
 }
