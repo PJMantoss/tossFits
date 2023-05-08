@@ -7,3 +7,10 @@ const sessionConfig = {
     maxAge: 60 * 60 * 24 * 365, // How long a user should stay signed-in
     secret: process.env.COOKIE_SECRET,
 }
+
+export default config({
+    server: {
+        cors: {}
+    },
+    db
+});
