@@ -10,7 +10,10 @@ const sessionConfig = {
 
 export default config({
     server: {
-        cors: {}
+        cors: {
+            origin: [],
+            credentials: true
+        }
     },
     db
 });
