@@ -6,6 +6,7 @@ export const User = list({
     // ui
 
     fields: {
-        name: text(),
+        name: text({ isRequired: true }),
+        email: text({ isRequired: true, isUnique: true })
     }
 });
