@@ -9,6 +9,7 @@ const sessionConfig = {
 }
 
 export default config({
+    //@ts-ignore
     server: {
         cors: {
             origin: [process.env.FRONTEND_URL],
