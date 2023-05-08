@@ -7,6 +7,7 @@ export const User = list({
 
     fields: {
         name: text({ isRequired: true }),
-        email: text({ isRequired: true, isUnique: true })
+        email: text({ isRequired: true, isUnique: true }),
+        password: password({ isRequired: true }),
     }
 });
