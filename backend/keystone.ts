@@ -19,5 +19,12 @@ export default config({
         adapter: 'mongoose',
         url: databaseURL,
         // Add Data seeds here
+    },
+    lists: createSchema({
+        // schema items go in here
+    }),
+    ui: {
+        // change this for roles
+        isAccessAllowed: () => true,
     }
 });
