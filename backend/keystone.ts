@@ -12,8 +12,11 @@ export default config({
     server: {
         cors: {
             origin: [process.env.FRONTEND_URL],
-            credentials: true
-        }
+            credentials: true,
+        },
     },
-    db
+    db: {
+        adapter: 'mongoose',
+        url: databaseURL,
+    }
 });
