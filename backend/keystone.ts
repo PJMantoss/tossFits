@@ -18,5 +18,6 @@ export default config({
     db: {
         adapter: 'mongoose',
         url: databaseURL,
+        // Add Data seeds here
     }
 });
