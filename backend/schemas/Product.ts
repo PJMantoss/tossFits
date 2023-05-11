@@ -22,5 +22,6 @@ export const Product = list({
             },
         }),
         price: integer(),
+        // ToDo: Add Photo
     }
 });
