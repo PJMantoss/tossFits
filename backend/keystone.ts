@@ -20,7 +20,7 @@ const { withAuth } = createAuth({
     },
 });
 
-export default config({
+export default withAuth(config({
     //@ts-ignore
     server: {
         cors: {
@@ -41,4 +41,4 @@ export default config({
         // change this for roles
         isAccessAllowed: () => true,
     }
-});
+}));
