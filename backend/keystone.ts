@@ -2,6 +2,7 @@ import { config, createSchema } from '@keystone-next/keystone/schema';
 import { User } from './schemas/User';
 import 'dotenv/config';
 import { createAuth } from '@keystone-next/auth';
+import { withItemData, statelessSessions } from '@keystone-next/keystone/session';
 
 const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
 
@@ -40,5 +41,6 @@ export default withAuth(config({
     ui: {
         // change this for roles
         isAccessAllowed: () => true,
-    }
+    },
+    session: withItemData(statelessSessions(sessionConfig)),
 }));
