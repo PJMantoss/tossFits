@@ -1,6 +1,8 @@
+import { withAuth } from 
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import { User } from './schemas/User';
 import 'dotenv/config';
+import { createAuth } from '@keystone-next/auth';
 
 const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
 
@@ -8,6 +10,8 @@ const sessionConfig = {
     maxAge: 60 * 60 * 24 * 365, // How long a user should stay signed-in
     secret: process.env.COOKIE_SECRET,
 }
+
+const { withAuth } = createAuth({});
 
 export default config({
     //@ts-ignore
