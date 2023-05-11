@@ -14,6 +14,9 @@ const { withAuth } = createAuth({
     listKey: 'User',
     identityField: 'email',
     secretField: 'password',
+    initFirstItem: {
+        fields: ['name', 'email', 'password']
+    },
 });
 
 export default config({
