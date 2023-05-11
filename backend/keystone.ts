@@ -39,7 +39,7 @@ export default withAuth(config({
         User,
     }),
     ui: {
-        // change this for roles
+        // Show the UI only for people who have passed the test
         isAccessAllowed: ({ session }) => {
             return !!session?.data
         },
