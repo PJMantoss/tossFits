@@ -45,6 +45,7 @@ export default withAuth(config({
         },
     },
     session: withItemData(statelessSessions(sessionConfig), {
-        User: `id`,
+        // GraphQL Query
+        User: 'id',
     })
 }));
