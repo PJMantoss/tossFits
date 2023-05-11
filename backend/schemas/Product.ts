@@ -9,6 +9,12 @@ export const Product = list({
                 displayMode: 'textarea',
             }
         }),
-        status: select({}),
+        status: select({
+            options: [
+                {label: 'Draft', value: 'Draft'},
+                {label: '', value: ''},
+                {label: '', value: ''},
+            ]
+        }),
     }
 });
