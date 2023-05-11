@@ -1,5 +1,6 @@
 import { text } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
+import { select } from '@keystone-next/fields';
 
 export const Product = list({
     fields: {
@@ -16,7 +17,10 @@ export const Product = list({
                 {label: 'Unavailable', value: 'UNAVAILABLE'},
             ],
             defaultValue: 'DRAFT',
-            ui: {},
+            ui: {
+                displayMode: 'segmented-control',
+                createView: { fieldMode: 'hidden' }
+            },
         }),
     }
 });
