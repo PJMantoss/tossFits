@@ -14,7 +14,9 @@ export const Product = list({
                 {label: 'Draft', value: 'Draft'},
                 {label: 'Available', value: 'AVAILABLE'},
                 {label: 'Unavailable', value: 'UNAVAILABLE'},
-            ]
+            ],
+            defaultValue: 'DRAFT',
+            ui: {},
         }),
     }
 });
