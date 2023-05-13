@@ -3,6 +3,7 @@ import { createAuth } from '@keystone-next/auth';
 import { withItemData, statelessSessions } from '@keystone-next/keystone/session';
 import { User } from './schemas/User';
 import { Product } from './schemas/Product';
+import { ProductImage } from './schemas/ProductImage';
 import 'dotenv/config';
 
 const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/keystone-toss-fits-tutorial';
@@ -39,6 +40,7 @@ export default withAuth(config({
         // schema items go in here
         User,
         Product,
+        ProductImage,
     }),
     ui: {
         // Show the UI only for people who have passed the test
