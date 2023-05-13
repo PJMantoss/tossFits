@@ -3,9 +3,9 @@ import { text } from "@keystone-next/fields";
 import { list } from "@keystone-next/keystone/schema";
 
 const cloudinary = {
-    cloudName,
-    apiKey,
-    apiSecret
+    cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+    apiKey: process.env.CLOUDINARY_KEY,
+    apiSecret: process.env.CLOUDINARY_SECRET
 }
 
 export const ProductImage = list({
