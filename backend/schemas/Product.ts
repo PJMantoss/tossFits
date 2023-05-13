@@ -11,7 +11,7 @@ export const Product = list({
         }),
         status: select({
             options: [
-                {label: 'Draft', value: 'Draft'},
+                {label: 'Draft', value: 'DRAFT'},
                 {label: 'Available', value: 'AVAILABLE'},
                 {label: 'Unavailable', value: 'UNAVAILABLE'},
             ],
