@@ -5,7 +5,7 @@ import { User } from './schemas/User';
 import { Product } from './schemas/Product';
 import 'dotenv/config';
 
-const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
+const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/keystone-toss-fits-tutorial';
 
 const sessionConfig = {
     maxAge: 60 * 60 * 24 * 365, // How long a user should stay signed-in
