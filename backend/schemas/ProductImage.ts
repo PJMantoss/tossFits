@@ -17,5 +17,6 @@ export const ProductImage = list({
             label: 'Source',
         }),
         altText: text(),
+        product: relationship(),
     },
 });
