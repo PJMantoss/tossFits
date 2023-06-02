@@ -10,7 +10,7 @@ export const Product = list({
             }
         }),
         photo: relationship({
-            ref: 'ProductImage'
+            ref: 'ProductImage.image'
         }), 
         status: select({
             options: [
