@@ -11,6 +11,7 @@ export const cloudinary = {
 }
 
 export const ProductImage = list({
+
     fields: {
         image: cloudinaryImage({
             cloudinary,
