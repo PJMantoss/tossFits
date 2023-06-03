@@ -15,7 +15,7 @@ export const Product = list({
                 displayMode: 'cards',
                 cardFields: ['image', 'altText'],
                 inlineCreate: { fields: ['image', 'altText'] },
-                inlineEdit: {}
+                inlineEdit: { fields: ['image', 'altText'] }
             },
         }), 
         status: select({
