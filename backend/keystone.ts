@@ -5,12 +5,14 @@ import { User } from './schemas/User';
 import { Product } from './schemas/Product';
 import { ProductImage } from './schemas/ProductImage';
 import 'dotenv/config';
+import { insertSeedData } from './seed-data';
 
 const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/keystone-toss-fits-tutorial';
 
 const sessionConfig = {
     maxAge: 60 * 60 * 24 * 365, // How long a user should stay signed-in
     secret: process.env.COOKIE_SECRET,
+    secureCookies: false
 }
 
 const { withAuth } = createAuth({
@@ -35,6 +37,12 @@ export default withAuth(config({
         adapter: 'mongoose',
         url: databaseURL,
         // Add Data seeds here
+        async onConnect(keystone) {
+            console.log("Connected to the database");
+            if(process.argv.includes("--seed-data")){
+                await insertSeedData(keystone)
+            }
+        }
     },
     lists: createSchema({
         // schema items go in here
