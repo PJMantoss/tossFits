@@ -40,7 +40,7 @@ export default withAuth(config({
         async onConnect(keystone) {
             console.log("Connected to the database");
             if(process.argv.includes("--seed-data")){
-                await insertSeedData(keystone)
+                await insertSeedData(keystone);
             }
         }
     },
