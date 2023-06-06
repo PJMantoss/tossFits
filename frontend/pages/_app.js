@@ -3,6 +3,7 @@ import NProgress from "nprogress";
 import Router from 'next/router';
 import { ApolloProvider } from '@apollo/client';
 import '../components/styles/nprogress.css';
+import withData from '../lib/withData';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -18,4 +19,4 @@ function theApp({ Component, pageProps }) {
   )
 }
 
-export default theApp;
+export default withData(theApp);
