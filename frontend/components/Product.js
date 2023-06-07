@@ -20,6 +20,7 @@ export default function Product({ product }) {
         <PriceTag>
             {formatMoney(product.price)}
         </PriceTag>
+        <p>{product.description}</p>
     </ItemStyles>
   )
 }
