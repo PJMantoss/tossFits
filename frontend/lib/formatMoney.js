@@ -1,6 +1,11 @@
-export default function FormatMoney(){
+export default function FormatMoney(amount){
     const options = {
         style: "currency",
-        currency: "USD"
-    }
+        currency: "USD",
+        minimumFractionDigits: 2,
+    };
+
+    const formatter = Intl.NumberFormat('en-US', options);
+
+    return formatter.format(amount);
 }
