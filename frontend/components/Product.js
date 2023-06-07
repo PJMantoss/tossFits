@@ -2,6 +2,7 @@ import React from 'react';
 import ItemStyles from './styles/ItemStyles';
 import Title from './styles/Title';
 import Link from 'next/link';
+import PriceTag from './styles/PriceTag';
 
 export default function Product({ product }) {
   return (
@@ -15,6 +16,9 @@ export default function Product({ product }) {
                 {product.name}
             </Link>
         </Title>
+        <PriceTag>
+            {product.price}
+        </PriceTag>
     </ItemStyles>
   )
 }
