@@ -1,2 +1,9 @@
 import React from 'react';
-export { default } from './products';
+
+function products() {
+  return (
+    <div>products!</div>
+  )
+}
+
+export default products
