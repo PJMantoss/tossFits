@@ -7,7 +7,7 @@ export default function formatMoney(amount=0){
 
     // Check if it's a clean dollar amount 
     if (amount % 100 === 0){
-        minimumFractionDigits = 0;
+        options.minimumFractionDigits = 0;
     }
 
     const formatter = Intl.NumberFormat('en-US', options);
