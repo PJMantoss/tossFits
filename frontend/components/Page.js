@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --maxWidth: 1000px;
     --boxShadow: 0px 12px 24px rgba(0,0,0,0.09);
     box-sizing: border-box;
+    font-size: 16px;
   }
 
   *, *:before, *:after {
@@ -33,8 +34,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'radnika_next', Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   a {
