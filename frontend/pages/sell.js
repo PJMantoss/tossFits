@@ -9,4 +9,4 @@ function sell() {
   )
 }
 
-export default sell
+export default sell;
