@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const CreateProduct = () => {
+    const [name, setName] = useState('Toss');
     return (
         <form>
             <label htmlFor="">
@@ -8,7 +9,9 @@ const CreateProduct = () => {
                     id="name"
                     name="name"
                     type="text"
-                    placeholder=""
+                    placeholder="Name"
+                    value={name}
+                    onChange={e => e.target.value}
                 />
             </label>
         </form>
