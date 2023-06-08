@@ -11,7 +11,7 @@ const CreateProduct = () => {
                     type="text"
                     placeholder="Name"
                     value={name}
-                    onChange={e => e.target.value}
+                    onChange={e => console.log(e.target.value)}
                 />
             </label>
         </form>
