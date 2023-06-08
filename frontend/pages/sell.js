@@ -1,8 +1,11 @@
 import React from 'react';
+import CreateProduct from '../components/CreateProduct';
 
 function sell() {
   return (
-    <h2>I'm a Sell component</h2>
+    <div>
+      <CreateProduct />
+    </div>
   )
 }
 
