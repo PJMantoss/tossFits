@@ -5,6 +5,10 @@ function useForm(initial = {}) {
     const [state, setstate] = useState(initial);
 }
 
-function handleChange(){}
+function handleChange(){
+    setInputs({
+        ...inputs,
+    })
+}
 
 export default useForm;
