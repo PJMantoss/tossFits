@@ -9,6 +9,7 @@ function handleChange(){
     setInputs({
         // Copy existing state
         ...inputs,
+        name: e.target.value
     })
 }
 
