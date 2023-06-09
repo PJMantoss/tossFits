@@ -7,6 +7,7 @@ function useForm(initial = {}) {
 
 function handleChange(){
     setInputs({
+        // Copy existing state
         ...inputs,
     })
 }
