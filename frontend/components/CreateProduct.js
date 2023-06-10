@@ -21,8 +21,8 @@ const CreateProduct = () => {
                     id="price"
                     name="price"
                     type="text"
-                    placeholder="Name"
-                    value={name}
+                    placeholder="Price"
+                    value={price}
                     onChange={e => console.log(e.target.value)}
                 />
             </label>
