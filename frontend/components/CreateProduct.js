@@ -4,7 +4,8 @@ const CreateProduct = () => {
     const [name, setName] = useState('Toss');
     return (
         <form>
-            <label htmlFor="">
+            <label htmlFor="name">
+                Name
                 <input 
                     id="name"
                     name="name"
