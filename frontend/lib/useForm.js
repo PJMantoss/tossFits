@@ -5,11 +5,12 @@ function useForm(initial = {}) {
     const [state, setstate] = useState(initial);
 }
 
-function handleChange(){
+function handleChange(e){
+    const {name, value} = e.target;
     setInputs({
         // Copy existing state
         ...inputs,
-        name: e.target.value
+        [name]: value
     })
 }
 
