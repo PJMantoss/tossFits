@@ -15,6 +15,17 @@ const CreateProduct = () => {
                     onChange={e => console.log(e.target.value)}
                 />
             </label>
+            <label htmlFor="price">
+                Price
+                <input 
+                    id="price"
+                    name="price"
+                    type="text"
+                    placeholder="Name"
+                    value={name}
+                    onChange={e => console.log(e.target.value)}
+                />
+            </label>
         </form>
     );
 }
