@@ -14,6 +14,7 @@ function useForm(initial = {}) {
     }
 
     // Return what we want to surface from this custom hook
+    return {}
 }
 
 export default useForm;
