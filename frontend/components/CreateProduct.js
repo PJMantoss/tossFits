@@ -13,7 +13,7 @@ const CreateProduct = () => {
                     type="text"
                     placeholder="Name"
                     value={inputs.name}
-                    onChange={e => console.log(e.target.value)}
+                    onChange={handleChange}
                 />
             </label>
             <label htmlFor="price">
@@ -24,7 +24,7 @@ const CreateProduct = () => {
                     type="text"
                     placeholder="Price"
                     value={price}
-                    onChange={e => console.log(e.target.value)}
+                    onChange={handleChange}
                 />
             </label>
         </form>
