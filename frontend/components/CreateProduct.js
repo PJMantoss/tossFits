@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useForm from '../lib/useForm';
 
 const CreateProduct = () => {
     const [name, setName] = useState('Toss');
