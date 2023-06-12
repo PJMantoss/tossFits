@@ -2,7 +2,7 @@ import React from 'react';
 import useForm from '../lib/useForm';
 
 const CreateProduct = () => {
-    const {} = useForm();
+    const {inputs, handleChange} = useForm();
     return (
         <form>
             <label htmlFor="name">
@@ -12,7 +12,7 @@ const CreateProduct = () => {
                     name="name"
                     type="text"
                     placeholder="Name"
-                    value={name}
+                    value={inputs.name}
                     onChange={e => console.log(e.target.value)}
                 />
             </label>
