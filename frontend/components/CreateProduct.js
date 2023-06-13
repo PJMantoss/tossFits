@@ -31,6 +31,8 @@ const CreateProduct = () => {
                     onChange={handleChange}
                 />
             </label>
+            <button type="button" onClick={resetForm}>Reset Form</button>
+            <button type="button" onClick={clearForm}>Clear Form</button>
         </form>
     );
 }
