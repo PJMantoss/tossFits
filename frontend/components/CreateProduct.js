@@ -25,9 +25,9 @@ const CreateProduct = () => {
                 <input 
                     id="price"
                     name="price"
-                    type="text"
+                    type="number"
                     placeholder="Price"
-                    value={price}
+                    value={inputs.price}
                     onChange={handleChange}
                 />
             </label>
