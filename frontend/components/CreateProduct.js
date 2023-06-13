@@ -3,7 +3,9 @@ import useForm from '../lib/useForm';
 
 const CreateProduct = () => {
     const {inputs, handleChange} = useForm({
-        name: "Big Shoes"
+        name: "Big Shoes",
+        price: 4000,
+        description: "Nice shoes"
     });
     return (
         <form>
