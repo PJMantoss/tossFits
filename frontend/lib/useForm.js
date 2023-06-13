@@ -20,6 +20,16 @@ function useForm(initial = {}) {
         })
     }
 
+    function resetForm(){
+        setInputs(initial)
+    }
+
+    function clearForm(){
+        const blankState = Object.fromEntries(Object.entries());
+
+        setInputs(blankState);
+    }
+
     // Return what we want to surface from this custom hook
     return {
         inputs,
