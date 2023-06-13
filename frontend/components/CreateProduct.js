@@ -54,7 +54,7 @@ const CreateProduct = () => {
                         onChange={handleChange}
                     />
                 </label>
-                <button type="submit" onClick={resetForm}>+ Add Product</button>
+                <button type="submit">+ Add Product</button>
             </fieldset>
         </Form>
     );
