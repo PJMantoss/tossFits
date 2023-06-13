@@ -2,7 +2,9 @@ import React from 'react';
 import useForm from '../lib/useForm';
 
 const CreateProduct = () => {
-    const {inputs, handleChange} = useForm();
+    const {inputs, handleChange} = useForm({
+        name: "Big Shoes"
+    });
     return (
         <form>
             <label htmlFor="name">
