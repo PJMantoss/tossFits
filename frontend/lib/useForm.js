@@ -25,7 +25,7 @@ function useForm(initial = {}) {
     }
 
     function clearForm(){
-        const blankState = Object.fromEntries(Object.entries());
+        const blankState = Object.fromEntries(Object.entries(inputs).map(([key, value]) => [key, ""]));
 
         setInputs(blankState);
     }
