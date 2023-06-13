@@ -10,6 +10,17 @@ const CreateProduct = () => {
     });
     return (
         <Form>
+            <fieldset>
+            <label htmlFor="image">
+                Image
+                <input 
+                    id="image"
+                    name="image"
+                    type="file"
+                    onChange={handleChange}
+                />
+            </label>
+            </fieldset>
             <label htmlFor="name">
                 Name
                 <input 
