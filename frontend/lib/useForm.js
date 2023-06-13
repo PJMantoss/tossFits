@@ -33,7 +33,9 @@ function useForm(initial = {}) {
     // Return what we want to surface from this custom hook
     return {
         inputs,
-        handleChange
+        handleChange,
+        resetForm,
+        clearForm
     }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import useForm from '../lib/useForm';
 
 const CreateProduct = () => {
-    const {inputs, handleChange} = useForm({
+    const {inputs, handleChange, resetForm, clearForm} = useForm({
         name: "Big Shoes",
         price: 4000,
         description: "Nice shoes"
