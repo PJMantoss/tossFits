@@ -9,7 +9,9 @@ function useForm(initial = {}) {
         if(type === "number"){
             value = parseInt(value);
         }
-        if(type === "file"){}
+        if(type === "file"){
+            value[0] = e.target.files;
+        }
 
         setInputs({
             // Copy existing state
