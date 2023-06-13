@@ -5,7 +5,10 @@ function useForm(initial = {}) {
     const [inputs, setInputs] = useState(initial);
 
     function handleChange(e){
-        const {name, value} = e.target;
+        let {name, value, type} = e.target;
+        if(type === "number"){
+            value = parseInt(value);
+        }
         setInputs({
             // Copy existing state
             ...inputs,
