@@ -9,7 +9,9 @@ const CreateProduct = () => {
         description: "Nice shoes"
     });
     return (
-        <Form>
+        <Form
+            onSubmit={e => { e.preventDefault(); console.log(inputs);}}
+        >
             <fieldset>
                 <label htmlFor="image">
                     Image
