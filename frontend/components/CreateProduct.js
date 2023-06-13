@@ -42,6 +42,16 @@ const CreateProduct = () => {
                         onChange={handleChange}
                     />
                 </label>
+                <label htmlFor="description">
+                    Description
+                    <textarea 
+                        id="description"
+                        name="description"
+                        placeholder="Description"
+                        value={inputs.description}
+                        onChange={handleChange}
+                    />
+                </label>
                 <button type="submit" onClick={resetForm}>+ Add Product</button>
             </fieldset>
         </Form>
