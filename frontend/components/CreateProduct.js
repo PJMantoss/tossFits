@@ -1,5 +1,6 @@
 import React from 'react';
 import useForm from '../lib/useForm';
+import Form from './styles/Form';
 
 const CreateProduct = () => {
     const {inputs, handleChange, resetForm, clearForm} = useForm({
@@ -8,7 +9,7 @@ const CreateProduct = () => {
         description: "Nice shoes"
     });
     return (
-        <form>
+        <Form>
             <label htmlFor="name">
                 Name
                 <input 
@@ -33,7 +34,7 @@ const CreateProduct = () => {
             </label>
             <button type="button" onClick={resetForm}>Reset Form</button>
             <button type="button" onClick={clearForm}>Clear Form</button>
-        </form>
+        </Form>
     );
 }
 
