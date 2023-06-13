@@ -68,7 +68,7 @@ function Page({ children, cool }) {
   )
 }
 
-Page.PropTypes = {
+Page.propTypes = {
   cool: PropTypes.string,
   children: PropTypes.any
 }
