@@ -34,6 +34,14 @@ const CreateProduct = () => {
         price: 4000,
         description: "Nice shoes"
     });
+
+    const [ createProduct, { loading, error, data } ] = useMutation(
+        CREATE_PRODUCT_MUTATION,
+        {
+            variables: inputs
+        }
+    );
+
     return (
         <Form
             onSubmit={e => { e.preventDefault(); console.log(inputs);}}
