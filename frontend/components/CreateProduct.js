@@ -33,6 +33,7 @@ const CREATE_PRODUCT_MUTATION = gql`
 
 const CreateProduct = () => {
     const {inputs, handleChange, resetForm, clearForm} = useForm({
+        image: "",
         name: "Big Shoes",
         price: 4000,
         description: "Nice shoes"
@@ -54,6 +55,7 @@ const CreateProduct = () => {
                     // Submit the input fields to the backend
                     const res = await createProduct();
                     console.log(res);
+                    clearForm();
                 }
             }
         >
