@@ -46,7 +46,7 @@ const CreateProduct = () => {
         <Form
             onSubmit={e => { e.preventDefault(); console.log(inputs);}}
         >
-            <fieldset>
+            <fieldset disabled={loading} aria-busy={loading}>
                 <label htmlFor="image">
                     Image
                     <input 
