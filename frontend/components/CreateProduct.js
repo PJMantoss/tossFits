@@ -44,7 +44,14 @@ const CreateProduct = () => {
 
     return (
         <Form
-            onSubmit={e => { e.preventDefault(); console.log(inputs);}}
+            onSubmit={
+               async e => {
+                    e.preventDefault(); 
+                    console.log(inputs);
+                    // Submit the input fields to the backend
+                    const res = await createProduct();
+                }
+            }
         >
             <fieldset disabled={loading} aria-busy={loading}>
                 <label htmlFor="image">
