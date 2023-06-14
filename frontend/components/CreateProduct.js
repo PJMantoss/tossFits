@@ -3,6 +3,8 @@ import useForm from '../lib/useForm';
 import Form from './styles/Form';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
+import DisplayError from './ErrorMessage';
+
 
 const CREATE_PRODUCT_MUTATION = gql`
     mutation CREATE_PRODUCT_MUTATION(
