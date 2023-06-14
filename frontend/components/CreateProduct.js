@@ -1,6 +1,9 @@
 import React from 'react';
 import useForm from '../lib/useForm';
 import Form from './styles/Form';
+import gql from 'graphql-tag';
+
+const CREATE_PRODUCT_MUTATION = gql``;
 
 const CreateProduct = () => {
     const {inputs, handleChange, resetForm, clearForm} = useForm({
