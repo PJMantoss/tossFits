@@ -3,7 +3,21 @@ import useForm from '../lib/useForm';
 import Form from './styles/Form';
 import gql from 'graphql-tag';
 
-const CREATE_PRODUCT_MUTATION = gql``;
+const CREATE_PRODUCT_MUTATION = gql`
+    mutation {
+        createProduct (data:{
+            name: "Sample Product",
+            description: "Test",
+            price: 100,
+            status: "AVAILABLE"
+        }){
+            id
+            price
+            description
+            status
+        }
+    }
+`;
 
 const CreateProduct = () => {
     const {inputs, handleChange, resetForm, clearForm} = useForm({
