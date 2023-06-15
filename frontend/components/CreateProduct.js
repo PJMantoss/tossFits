@@ -54,7 +54,7 @@ const CreateProduct = () => {
                     console.log(inputs);
                     // Submit the input fields to the backend
                     await createProduct();
-                    console.log(res);
+                    //console.log(res);
                     clearForm();
                 }
             }
