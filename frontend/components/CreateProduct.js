@@ -16,9 +16,9 @@ const CREATE_PRODUCT_MUTATION = gql`
     ) {
         createProduct (
             data:{
-            name: $name,
-            description: $description,
-            price: $price,
+            name: $name
+            description: $description
+            price: $price
             status: "AVAILABLE"
             photo: { create: { image: $image, altText: $name } }
         }
@@ -26,7 +26,7 @@ const CREATE_PRODUCT_MUTATION = gql`
             id
             price
             description
-            status
+            name
         }
     }
 `;
@@ -39,7 +39,7 @@ const CreateProduct = () => {
         description: "Nice shoes"
     });
 
-    const [ createProduct, { loading, error, data } ] = useMutation(
+    const [ createProduct, { data, loading, error } ] = useMutation(
         CREATE_PRODUCT_MUTATION,
         {
             variables: inputs
