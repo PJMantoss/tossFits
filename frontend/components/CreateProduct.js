@@ -53,7 +53,7 @@ const CreateProduct = () => {
                     e.preventDefault(); 
                     console.log(inputs);
                     // Submit the input fields to the backend
-                    data = await createProduct();
+                    await createProduct();
                     console.log(res);
                     clearForm();
                 }
