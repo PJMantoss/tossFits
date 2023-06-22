@@ -58,6 +58,10 @@ const CreateProduct = () => {
                     await createProduct();
                     //console.log(res);
                     clearForm();
+                    // Go to that product's page
+                    Router.push({
+                        pathmame: ``
+                    })
                 }
             }
         >
