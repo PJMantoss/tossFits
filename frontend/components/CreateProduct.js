@@ -61,7 +61,7 @@ const CreateProduct = () => {
                     clearForm();
                     // Go to that product's page
                     Router.push({
-                        pathmame: ``
+                        pathmame: `/product/{data.createProduct.id}`
                     })
                 }
             }
