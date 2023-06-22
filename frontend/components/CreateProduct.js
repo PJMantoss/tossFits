@@ -56,12 +56,12 @@ const CreateProduct = () => {
                     e.preventDefault(); 
                     console.log(inputs);
                     // Submit the input fields to the backend
-                    await createProduct();
+                    const res = await createProduct();
                     //console.log(res);
                     clearForm();
                     // Go to that product's page
                     Router.push({
-                        pathmame: `/product/${data.createProduct.id}`
+                        pathname: `/product/${res.createProduct.id}`
                     })
                 }
             }
