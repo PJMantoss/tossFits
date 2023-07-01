@@ -10,7 +10,7 @@ function useForm(initial = {}) {
             value = parseInt(value);
         }
         if(type === "file"){
-            [value] = e.target.file;
+            [e.target.value] = e.target.file;
         }
 
         setInputs({
