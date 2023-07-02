@@ -110,7 +110,7 @@ const CreateProduct = () => {
                         onChange={handleChange}
                     />
                 </label>
-                <button type="button">+ Add Product</button>
+                <button type="submit">+ Add Product</button>
             </fieldset>
         </Form>
     );
