@@ -35,7 +35,7 @@ const CREATE_PRODUCT_MUTATION = gql`
 
 const CreateProduct = () => {
     const {inputs, handleChange, resetForm, clearForm} = useForm({
-        image: "",
+        image: '',
         name: "Big Shoes",
         price: 4000,
         description: "Nice shoes"
@@ -61,7 +61,7 @@ const CreateProduct = () => {
                     clearForm();
                     // Go to that product's page
                     Router.push({
-                        pathname: `/product/${res.createProduct.id}`
+                        pathname: `/product/${res.data.createProduct.id}`
                     })
                 }
             }
