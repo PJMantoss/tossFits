@@ -72,6 +72,7 @@ const CreateProduct = () => {
                 <label htmlFor="image">
                     Image
                     <input 
+                        required
                         id="image"
                         name="image"
                         type="file"
