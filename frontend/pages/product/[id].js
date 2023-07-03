@@ -1,3 +1,3 @@
-export default function SingleProduct(){
-    return <h1>Hey! I'm a Single Product</h1>
+export default function SingleProduct({ query }){
+    return <h1>Hey! I'm a Single Product { query.id }</h1>
 }
