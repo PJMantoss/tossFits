@@ -11,9 +11,9 @@ const SINGLE_ITEM_QUERY = gql`
     }
 `;
 
-function SingleProduct() {
+function SingleProduct({ id }) {
     const { data, loading, error } = useQuery(SINGLE_ITEM_QUERY);
-    
+
   return (
     <div>SingleProduct</div>
   )
