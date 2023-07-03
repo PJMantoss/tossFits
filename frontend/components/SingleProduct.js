@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/client';
 import gql from "graphql-tag";
+import styled from 'styled-components';
 import DisplayError from './ErrorMessage';
 
 const SINGLE_ITEM_QUERY = gql`
@@ -19,6 +20,10 @@ const SINGLE_ITEM_QUERY = gql`
     }
 `;
 
+const ProductStyles = styled.div`
+    background: red;
+`;
+
 function SingleProduct({ id }) {
     const { data, loading, error } = useQuery(SINGLE_ITEM_QUERY, {
         variables: {
@@ -32,6 +37,11 @@ function SingleProduct({ id }) {
 
   return (
     <div>
+        <head>
+            <title>
+                TossFits | {Product.name}
+            </title>
+        </head>
         <img 
             src={Product.photo.image.publicUrlTransformed} 
             alt={Product.photo.altText}
