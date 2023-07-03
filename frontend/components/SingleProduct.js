@@ -1,5 +1,6 @@
 import React, { useQuery } from 'react';
 import gql from "graphql-tag";
+import DisplayError from './ErrorMessage';
 
 const SINGLE_ITEM_QUERY = gql`
     query {
@@ -13,6 +14,8 @@ const SINGLE_ITEM_QUERY = gql`
 
 function SingleProduct({ id }) {
     const { data, loading, error } = useQuery(SINGLE_ITEM_QUERY);
+    if (loading) return <p>Loading...</p>
+    if (error) return <DisplayError error={error} />
 
   return (
     <div>SingleProduct</div>
