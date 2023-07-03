@@ -59,8 +59,6 @@ function Page({ children, cool }) {
     <div>
       <GlobalStyles />
       <Header />
-      <h1>I am the Page Component</h1>
-      <h3>{cool}</h3>
       <innerStyles>
         {children}
       </innerStyles>
