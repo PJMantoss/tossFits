@@ -5,9 +5,15 @@ import DisplayError from './ErrorMessage';
 const SINGLE_ITEM_QUERY = gql`
     query SINGLE_ITEM_QUERY($id: ID!) {
         Product(where: {id: "647e32be69b4872c76637519"}){
-            name,
-            price,
+            name
+            price
             description
+            id
+            photo {
+                image {
+                    publicUrlTransformed
+                }
+            }
         }
     }
 `;
