@@ -21,8 +21,15 @@ function SingleProduct({ id }) {
     if (loading) return <p>Loading...</p>
     if (error) return <DisplayError error={error} />
 
+    const { Product } = data;
+
   return (
-    <h2>{data.Product.name}</h2>
+    <div>
+        <div className='details'>
+            <h2>{Product.name}</h2>
+            <p>{Product.description}</p>
+        </div>
+    </div>
   )
 }
 
