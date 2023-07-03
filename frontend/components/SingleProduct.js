@@ -13,6 +13,7 @@ const SINGLE_ITEM_QUERY = gql`
                 image {
                     publicUrlTransformed
                 }
+                altText
             }
         }
     }
