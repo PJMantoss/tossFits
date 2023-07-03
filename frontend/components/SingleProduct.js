@@ -4,7 +4,7 @@ import DisplayError from './ErrorMessage';
 
 const SINGLE_ITEM_QUERY = gql`
     query SINGLE_ITEM_QUERY($id: ID!) {
-        Product(where: {id: "647e32be69b4872c76637519"}){
+        Product(where: {id: $id}){
             name
             price
             description
@@ -32,6 +32,10 @@ function SingleProduct({ id }) {
 
   return (
     <div>
+        <img 
+            src={Product.photo.image.publicUrlTransformed} 
+            alt={Product.photo.altText}
+        />
         <div className='details'>
             <h2>{Product.name}</h2>
             <p>{Product.description}</p>
