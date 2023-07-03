@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useQuery } from 'react';
 import gql from "graphql-tag";
 
 const SINGLE_ITEM_QUERY = gql`
@@ -12,6 +12,8 @@ const SINGLE_ITEM_QUERY = gql`
 `;
 
 function SingleProduct() {
+    const { data, loading, error } = useQuery(SINGLE_ITEM_QUERY);
+    
   return (
     <div>SingleProduct</div>
   )
