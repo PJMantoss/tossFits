@@ -1,9 +1,9 @@
-import React, { useQuery } from 'react';
+import { useQuery } from '@apollo/client';
 import gql from "graphql-tag";
 import DisplayError from './ErrorMessage';
 
 const SINGLE_ITEM_QUERY = gql`
-    query {
+    query SINGLE_ITEM_QUERY($id: ID!) {
         Product(where: {id: "647e32be69b4872c76637519"}){
             name,
             price,
@@ -13,12 +13,16 @@ const SINGLE_ITEM_QUERY = gql`
 `;
 
 function SingleProduct({ id }) {
-    const { data, loading, error } = useQuery(SINGLE_ITEM_QUERY);
+    const { data, loading, error } = useQuery(SINGLE_ITEM_QUERY, {
+        variables: {
+            id,
+        }
+    });
     if (loading) return <p>Loading...</p>
     if (error) return <DisplayError error={error} />
 
   return (
-    <div>SingleProduct</div>
+    <h2>{data.Product.name}</h2>
   )
 }
 
