@@ -70,12 +70,10 @@ export default function UpdateProduct({ id }){
                     //console.log(inputs);
                     // Submit the input fields to the backend
                     const res = await updateProduct({
-                        variables: {
-                            id,
-                            name: inputs.name,
-                            escription: inputs.description,
-                            price: inputs.price
-                        }
+                        id,
+                        name: inputs.name,
+                        escription: inputs.description,
+                        price: inputs.price
                     });
                     console.log(res);
                     // clearForm();
