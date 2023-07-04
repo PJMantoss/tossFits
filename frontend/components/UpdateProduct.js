@@ -44,7 +44,11 @@ export default function UpdateProduct({ id }){
         }
     });
 
-    const [updateProduct, {}] = useMutation(UPDATE_PRODUCT_MUTATION, {
+    const [updateProduct, {
+        data: updateData, 
+        error: updateError, 
+        loading: updateLoading
+    }] = useMutation(UPDATE_PRODUCT_MUTATION, {
         variables: {
             id,
         }
