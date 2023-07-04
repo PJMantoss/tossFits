@@ -5,7 +5,7 @@ function UpdateProductPage({ query }) {
   
   return (
     <div>
-      <UpdateProduct />
+      <UpdateProduct id={query.id} />
     </div>
   )
 }
