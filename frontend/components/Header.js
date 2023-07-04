@@ -4,7 +4,7 @@ import Nav from './Nav';
 import styled from 'styled-components';
 
 const Logo = styled.h1`
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin-left: 2rem;
   position: relative;
   z-index: 2; 
@@ -14,8 +14,8 @@ const Logo = styled.h1`
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0.5rem 1rem;
   }
+  padding: 2rem 1rem;
 `;
 
 const HeaderStyles = styled.header`

@@ -32,7 +32,7 @@ const UPDATE_PRODUCT_MUTATION = gql`
             id: $id,
             data: {
                 id: $id,
-                name: $$name,
+                name: $name,
                 description: $description,
                 price: $price
             }
@@ -87,16 +87,6 @@ export default function UpdateProduct({ id }){
             <DisplayError error={error || updateError} />
 
             <fieldset disabled={updateLoading} aria-busy={updateLoading}>
-                <label htmlFor="image">
-                    Image
-                    <input 
-                        required
-                        id="image"
-                        name="image"
-                        type="file"
-                        onChange={handleChange}
-                    />
-                </label>
                 <label htmlFor="name">
                     Name
                     <input 
