@@ -18,12 +18,16 @@ const SINGLE_PRODUCT_QUERY = gql`
     }
 `;
 
+const UPDATE_PRODUCT_MUTATION = gql``;
+
 export default function UpdateProduct({ id }){
     const {data, error, loading} = useQuery(SINGLE_PRODUCT_QUERY, {
         variables: {
             id
         }
     });
+
+    console.log(data)
 
     return <h1>Update Product {id}!</h1>
 }
