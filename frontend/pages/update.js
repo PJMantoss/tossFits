@@ -1,7 +1,7 @@
 import React from 'react';
 import UpdateProduct from '../components/UpdateProduct';
 
-function UpdateProductPage() {
+function UpdateProductPage({ query }) {
   
   return (
     <div>
