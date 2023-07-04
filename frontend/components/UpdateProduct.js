@@ -21,9 +21,9 @@ const SINGLE_PRODUCT_QUERY = gql`
 const UPDATE_PRODUCT_MUTATION = gql`
     mutation UPDATE_PRODUCT_MUTATION(
         $id: ID!
-        $name: String,
-        $description: String,
-        $price: Int,
+        $name: String
+        $description: String
+        $price: Int
     ){
         updateProduct(
             id,
