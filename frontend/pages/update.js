@@ -10,4 +10,4 @@ function UpdateProductPage() {
   )
 }
 
-export default sell;
+export default UpdateProductPage;
