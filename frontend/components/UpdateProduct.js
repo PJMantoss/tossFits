@@ -72,10 +72,10 @@ export default function UpdateProduct({ id }){
             onSubmit={
                async e => {
                     e.preventDefault(); 
-                    // console.log(inputs);
-                    // // Submit the input fields to the backend
-                    // const res = await createProduct();
-                    // //console.log(res);
+                    console.log(inputs);
+                    // Submit the input fields to the backend
+                    const res = await updateProduct();
+                    //console.log(res);
                     // clearForm();
                     // // Go to that product's page
                     // Router.push({
