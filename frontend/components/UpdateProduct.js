@@ -1,3 +1,4 @@
+import { useQuery } from "@apollo/client";
 import gql from "graphql-tag";
 
 const SINGLE_PRODUCT_QUERY = gql`
@@ -18,5 +19,11 @@ const SINGLE_PRODUCT_QUERY = gql`
 `;
 
 export default function UpdateProduct({ id }){
+    const {data, error, loading} = useQuery(SINGLE_PRODUCT_QUERY, {
+        variables: {
+            id
+        }
+    });
+
     return <h1>Update Product {id}!</h1>
 }
