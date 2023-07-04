@@ -40,12 +40,13 @@ const UPDATE_PRODUCT_MUTATION = gql`
 `;
 
 export default function UpdateProduct({ id }){
+    //Get the specific product
     const {data, error, loading} = useQuery(SINGLE_PRODUCT_QUERY, {
         variables: {
             id
         }
     });
-
+// use mutation to update the product
     const [updateProduct, {
         data: updateData, 
         error: updateError, 
@@ -54,9 +55,18 @@ export default function UpdateProduct({ id }){
         variables: {
             id,
         }
-    })
+    });
 
     console.log(data)
+
+    //create state for the form inputs
+
+    const {inputs, handleChange, resetForm, clearForm} = useForm({
+        image: '',
+        name: "Big Shoes",
+        price: 4000,
+        description: "Nice shoes"
+    });
 
     return (
         <Form
