@@ -47,6 +47,10 @@ export default function UpdateProduct({ id }){
             id
         }
     });
+
+    //If loading 
+    if(loading) return <p>Loading...</p>
+    
 // use mutation to update the product
     const [updateProduct, {
         data: updateData, 
@@ -61,7 +65,6 @@ export default function UpdateProduct({ id }){
     console.log(data)
 
     //create state for the form inputs
-
     const {inputs, handleChange, resetForm, clearForm} = useForm(data);
 
     return (
