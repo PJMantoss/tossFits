@@ -26,7 +26,7 @@ const UPDATE_PRODUCT_MUTATION = gql`
         $price: Int
     ){
         updateProduct(
-            id,
+            id: $id,
             data: {
                 id: $id,
                 name: $$name,
