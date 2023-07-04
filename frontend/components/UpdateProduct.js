@@ -1,6 +1,7 @@
 import { useMutation, useQuery } from "@apollo/client";
 import gql from "graphql-tag";
 import Form from "./styles/Form";
+import useForm from "../lib/useForm";
 import DisplayError from "./ErrorMessage";
 
 const SINGLE_PRODUCT_QUERY = gql`
@@ -61,12 +62,7 @@ export default function UpdateProduct({ id }){
 
     //create state for the form inputs
 
-    const {inputs, handleChange, resetForm, clearForm} = useForm({
-        image: '',
-        name: "Big Shoes",
-        price: 4000,
-        description: "Nice shoes"
-    });
+    const {inputs, handleChange, resetForm, clearForm} = useForm(data);
 
     return (
         <Form
