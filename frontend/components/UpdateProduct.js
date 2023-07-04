@@ -35,7 +35,12 @@ const UPDATE_PRODUCT_MUTATION = gql`
                 description: $description,
                 price: $price
             }
-        )
+        ){
+            id,
+            name,
+            description,
+            price
+        }
     }
 `;
 
@@ -52,7 +57,11 @@ export default function UpdateProduct({ id }){
         data: updateData, 
         error: updateError, 
         loading: updateLoading
-    }] = useMutation(UPDATE_PRODUCT_MUTATION);
+    }] = useMutation(UPDATE_PRODUCT_MUTATION, {
+        variables: {
+            id,
+        }
+    });
 
     //console.log(data)
 
@@ -72,11 +81,9 @@ export default function UpdateProduct({ id }){
                     const res = await updateProduct({
                         variables: {
                             id,
-                            data : {
-                                name: inputs.name,
-                                description: inputs.description,
-                                price: inputs.price
-                            }
+                            name: inputs.name,
+                            description: inputs.description,
+                            price: inputs.price
                         }
                     }).catch(console.error);
                     console.log(res);
@@ -123,7 +130,7 @@ export default function UpdateProduct({ id }){
                         onChange={handleChange}
                     />
                 </label>
-                <button type="submit">+ Update Product</button>
+                <button type="submit">Update Product</button>
             </fieldset>
         </Form>
     );
