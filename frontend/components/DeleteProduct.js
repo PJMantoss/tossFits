@@ -14,11 +14,13 @@ export default function DeleteProduct({ id, children }){
     const [deleteProduct, {loading, error}] = useMutation(DELETE_PRODUCT_MUTATION, {
         variables: {
             id
-        }
+        },
     });
+    
     return (
     <button 
         type="button" 
+        disabled={loading}
         onClick={() => {
             if(confirm("Are You Sure You Want to Delete this Item?")){
                 console.log("DELETING");
