@@ -3,7 +3,9 @@ export default function DeleteProduct({ id, children }){
     <button 
         type="button" 
         onClick={() => {
-            confirm("Are You Sure You Want to Delete this Item?");
+            if(confirm("Are You Sure You Want to Delete this Item?")){
+                console.log("DELETING");
+            };
         }}
     >
         {children}
