@@ -33,7 +33,7 @@ export default function Product({ product }) {
             >
                 Edit 
             </Link>
-            <DeleteProduct />
+            <DeleteProduct>Delete</DeleteProduct>
         </div>
     </ItemStyles>
   )
