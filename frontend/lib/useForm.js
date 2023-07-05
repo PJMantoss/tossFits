@@ -4,6 +4,12 @@ function useForm(initial = {}) {
     // create a state object for input
     const [inputs, setInputs] = useState(initial);
 
+    const initialValues = Object.values(initial).join('');
+
+    useEffect(() => {
+        
+    }, [initialValues]);
+
     function handleChange(e){
         let {name, value, type} = e.target;
         if(type === "number"){
