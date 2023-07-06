@@ -5,8 +5,10 @@ export default function Pagination({ page }){
     return (
         <PaginationStyles>
             <Head>
-                <title></title>
+                <title>
+                    TossFits - Page { page } of ___
+                </title>
             </Head>
         </PaginationStyles>
-    )
+    );
 }
