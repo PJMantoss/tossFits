@@ -1,5 +1,6 @@
 import Head from "next/head";
 import PaginationStyles from "./styles/PaginationStyles";
+import Link from "next/link";
 
 export default function Pagination({ page }){
     return (
@@ -9,6 +10,10 @@ export default function Pagination({ page }){
                     TossFits - Page { page } of ___
                 </title>
             </Head>
+            <Link href="/">Prev</Link>
+            <p>Page __ of ___</p>
+            <p>___ Items Total</p>
+            <Link href="/">Next</Link>
         </PaginationStyles>
     );
 }
