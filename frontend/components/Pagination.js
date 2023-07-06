@@ -4,6 +4,7 @@ import Link from "next/link";
 import gql from "graphql-tag";
 import { useQuery } from "@apollo/client";
 import DisplayError from "./ErrorMessage";
+import { perPage } from "../config";
 
 const PAGINATION_QUERY = gql`
     query PAGINATION_QUERY {
@@ -20,6 +21,7 @@ export default function Pagination({ page }){
     if (error) return <DisplayError error={error} />
 
     const { count } = data._allProductsMeta;
+    const pageCount = Math.ceil(count / perPage);
 
     return (
         <PaginationStyles>
