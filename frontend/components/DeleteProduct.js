@@ -10,6 +10,11 @@ const DELETE_PRODUCT_MUTATION = gql`
 }
 `;
 
+function update(cache, payload){
+    console.log(payload);
+    console.log();
+}
+
 export default function DeleteProduct({ id, children }){
     const [deleteProduct, {loading, error}] = useMutation(DELETE_PRODUCT_MUTATION, {
         variables: {
