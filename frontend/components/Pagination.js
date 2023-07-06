@@ -31,7 +31,7 @@ export default function Pagination({ page }){
                 </title>
             </Head>
             <Link href="/">Prev</Link>
-            <p>Page __ of ___</p>
+            <p>Page __ of { pageCount } </p>
             <p>{ count } Items Total</p>
             <Link href="/">Next</Link>
         </PaginationStyles>
