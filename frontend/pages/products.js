@@ -5,9 +5,9 @@ import Pagination from '../components/Pagination';
 function products() {
   return (
     <div>
-      <Pagination />
+      <Pagination page={1} />
       <Products />
-      <Pagination />
+      <Pagination page={1} />
     </div>
   )
 }
