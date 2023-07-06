@@ -13,7 +13,7 @@ const PAGINATION_QUERY = gql`
 `;
 
 export default function Pagination({ page }){
-    const {error, loading, data} = useQuery(PAGINATION_QUERY, );
+    const {error, loading, data} = useQuery(PAGINATION_QUERY);
     return (
         <PaginationStyles>
             <Head>
