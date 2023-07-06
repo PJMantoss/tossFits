@@ -12,7 +12,7 @@ const DELETE_PRODUCT_MUTATION = gql`
 
 function update(cache, payload){
     console.log(payload);
-    console.log();
+    console.log("running the update function after delete");
 }
 
 export default function DeleteProduct({ id, children }){
@@ -20,6 +20,7 @@ export default function DeleteProduct({ id, children }){
         variables: {
             id
         },
+        update
     });
     
     return (
