@@ -3,6 +3,7 @@ import PaginationStyles from "./styles/PaginationStyles";
 import Link from "next/link";
 import gql from "graphql-tag";
 import { useQuery } from "@apollo/client";
+import ErrorMessage from "./ErrorMessage";
 
 const PAGINATION_QUERY = gql`
     query PAGINATION_QUERY {
@@ -14,6 +15,10 @@ const PAGINATION_QUERY = gql`
 
 export default function Pagination({ page }){
     const {error, loading, data} = useQuery(PAGINATION_QUERY);
+
+    if (loading) return <p>Loading...</p>
+    if (error) return <ErrorMessage error={error} />
+    
     return (
         <PaginationStyles>
             <Head>
