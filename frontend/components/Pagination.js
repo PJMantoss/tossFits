@@ -1,6 +1,9 @@
 import Head from "next/head";
 import PaginationStyles from "./styles/PaginationStyles";
 import Link from "next/link";
+import gql from "graphql-tag";
+
+const PAGINATION_QUERY = gql``;
 
 export default function Pagination({ page }){
     return (
