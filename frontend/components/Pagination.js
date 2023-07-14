@@ -27,7 +27,7 @@ export default function Pagination({ page }){
         <PaginationStyles>
             <Head>
                 <title>
-                    TossFits - Page { page } of ___
+                    TossFits - Page { page } of { pageCount }
                 </title>
             </Head>
             <Link href={`/products/${page - 1}`}>
