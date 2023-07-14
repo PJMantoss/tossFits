@@ -5,12 +5,14 @@ import { useRouter } from 'next/dist/client/router';
 
 function products() {
   const { query } = useRouter();
-  //console.log(router);
+  //console.log(typeof query.page);
+  const page = parseInt(query.page);
+  //console.log(typeof page);
   return (
     <div>
-      <Pagination page={query.page || 1} />
+      <Pagination page={page || 1} />
       <Products />
-      <Pagination page={1} />
+      <Pagination page={page || 1} />
     </div>
   )
 }
