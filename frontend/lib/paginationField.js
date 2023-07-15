@@ -17,7 +17,11 @@ export default function paginationField(){
             const pages = Math.ceil(count / first);
 
             //check if we have existing items
-            const items = existing.slice(skip, skip + first);
+            const items = existing.slice(skip, skip + first).filter(x => x);
+            //If items from existing cache does not equal first variable
+            if(items.length !== first){
+                // Means we do not have any items, therefore go to the network to fetch new items
+            }
         },
         merge(){}
     }
