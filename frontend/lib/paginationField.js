@@ -10,7 +10,7 @@ export default function paginationField(){
             const { skip, first } = args;
 
             // Read the number of items on the page from the cache
-            const data = cache.readQuery({ query: PAGINATION_QUERY });
+            const data = cache.readQuery({ query: PAGINATION_QUERY, variables: { id } });
             console.log(data);
             const count = data?._allProductsMeta?.count;
             const page = skip / first + 1;
@@ -21,7 +21,7 @@ export default function paginationField(){
             if(items.length && items.length !== first && page == pages){
                 return items;
             }
-            
+
             //If items from existing cache does not equal first variable
             if(items.length !== first){
                 // Means we do not have any items, therefore go to the network to fetch new items
@@ -34,7 +34,7 @@ export default function paginationField(){
                 return items;
             }
 
-            return false; //Fallback to networks
+            return; //Fallback to networks
         },
         //Runs when apollo client comes back from the network with a product
         merge(existing, incoming, { args }){
