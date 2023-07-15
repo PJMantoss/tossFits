@@ -21,6 +21,12 @@ export default function paginationField(){
             //If items from existing cache does not equal first variable
             if(items.length !== first){
                 // Means we do not have any items, therefore go to the network to fetch new items
+                return false;
+            }
+
+            //If there are items in the cache, we do not need to go to the network. Just return them 
+            if(items.length){
+                console.log(`There are ${items.length} in the cache! Will send to apollo.`)
             }
         },
         merge(){}
