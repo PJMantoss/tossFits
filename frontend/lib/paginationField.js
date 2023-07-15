@@ -35,6 +35,6 @@ export default function paginationField(){
         //Runs when apollo client comes back from the network with a product
         merge(existing, incoming, { args }){
             console.log(`Merging items from the network ${incoming}`);
-        }
+        },
     }
 }
