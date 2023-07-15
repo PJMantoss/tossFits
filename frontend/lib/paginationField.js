@@ -26,8 +26,11 @@ export default function paginationField(){
 
             //If there are items in the cache, we do not need to go to the network. Just return them 
             if(items.length){
-                console.log(`There are ${items.length} in the cache! Will send to apollo.`)
+                console.log(`There are ${items.length} in the cache! Will send to apollo.`);
+                return items;
             }
+
+            return false; //Fallback to networks
         },
         merge(){}
     }
