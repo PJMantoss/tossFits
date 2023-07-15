@@ -1,5 +1,4 @@
 import { PAGINATION_QUERY } from '../components/Pagination';
-import {readQuery} from '@apollo/client';
 
 export default function paginationField(){
     return{
@@ -39,6 +38,11 @@ export default function paginationField(){
             for (let i = skip; i < skip.incomin; ++i){
                 merged[i] = incoming[i - skip];
             }
+
+            console.log(merged);
+
+            //Finally return the merged item from the cache
+            return merged;
         },
     }
 }
