@@ -4,7 +4,7 @@ export default function paginationField(){
     return{
         keyArgs: false, // tells apollo to ignore and allow us handle caching
         // Ask the read function for the product items
-        read(existing = [], {args, cache}){
+        read(existing = [], {args, cache, id}){
             console.log({existing, args, cache});
 
             const { skip, first } = args;
@@ -34,7 +34,7 @@ export default function paginationField(){
                 return items;
             }
 
-            return; //Fallback to networks
+            return false; //Fallback to networks
         },
         //Runs when apollo client comes back from the network with a product
         merge(existing, incoming, { args }){
