@@ -32,6 +32,9 @@ export default function paginationField(){
 
             return false; //Fallback to networks
         },
-        merge(){}
+        //Runs when apollo client comes back from the network with a product
+        merge(existing, incoming, { args }){
+            console.log(`Merging items from the network ${incoming}`);
+        }
     }
 }
