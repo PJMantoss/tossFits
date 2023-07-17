@@ -8,7 +8,7 @@ import DeleteProduct from './DeleteProduct';
 
 export default function Product({ product }) {
   return (
-    <ItemStyles>
+    <ItemStyles key={product.id}>
         <img
             src={product?.photo?.image?.publicUrlTransformed}
             alt={product.name}

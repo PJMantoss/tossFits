@@ -41,7 +41,7 @@ function Products({ page }) {
     if (error) return <p>{error.message}</p>
   return (
     <ProductsListStyles>
-        {data.allProducts.map((key, product) => (
+        {data.allProducts.map((product) => (
             <Product key={product.id} product={product}/>
         ))}
     </ProductsListStyles>
