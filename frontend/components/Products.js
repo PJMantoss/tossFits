@@ -40,13 +40,11 @@ function Products({ page }) {
     if (loading) return <p>Loading...</p>
     if (error) return <p>{error.message}</p>
   return (
-    <div>
-        <ProductsListStyles>
-            {data.allProducts.map((key, product) => (
-                <Product key={product.id} product={product}/>
-            ))}
-        </ProductsListStyles>
-    </div>
+    <ProductsListStyles>
+        {data.allProducts.map((key, product) => (
+            <Product key={product.id} product={product}/>
+        ))}
+    </ProductsListStyles>
   )
 }
 
