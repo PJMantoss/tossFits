@@ -42,7 +42,7 @@ function Products({ page }) {
   return (
     <div>
         <ProductsListStyles>
-            {data.allProducts.map(product => (
+            {data.allProducts.map((key, product) => (
                 <Product key={product.id} product={product}/>
             ))}
         </ProductsListStyles>
