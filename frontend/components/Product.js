@@ -6,7 +6,7 @@ import PriceTag from './styles/PriceTag';
 import formatMoney from '../lib/formatMoney';
 import DeleteProduct from './DeleteProduct';
 
-export default function Product({ key, product }) {
+export default function Product({ product }) {
   return (
     <ItemStyles>
         <img
