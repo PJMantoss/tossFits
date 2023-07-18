@@ -2,7 +2,13 @@ import { gql, useQuery } from '@apollo/client';
 
 const CURRENT_USER_QUERY = gql`
     query {
-        auth
+        authenticatedItem {
+            ... on User {
+                id
+                email
+                name
+            }
+        }
     }
 `;
 
