@@ -42,7 +42,7 @@ export default function paginationField(){
             const { skip, first } = args;
             const merged = existing ? existing.slice(0) : [];
             merged.push(incoming);
-            for (let i = skip; i < skip + incoming.lenth; ++i){
+            for (let i = skip; i < skip + incoming.length; ++i){
                 merged[i] = incoming[i - skip];
             }
 
