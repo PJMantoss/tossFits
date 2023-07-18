@@ -1,7 +1,9 @@
 import { gql, useQuery } from '@apollo/client';
 
 const CURRENT_USER_QUERY = gql`
-    query {}
+    query {
+        auth
+    }
 `;
 
 export default function useUser(){
