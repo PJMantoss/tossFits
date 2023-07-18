@@ -9,12 +9,11 @@ import DeleteProduct from './DeleteProduct';
 export default function Product({ product }) {
   return (
     <ItemStyles>
-        <>
         <img
             src={product?.photo?.image?.publicUrlTransformed}
             alt={product.name}
         />
-        <Title key={product.id}>
+        <Title>
             <Link href={`/product/${product.id}`}>
                 {product.name}
             </Link>
@@ -38,7 +37,6 @@ export default function Product({ product }) {
                 Delete
             </DeleteProduct>
         </div>
-        </>
     </ItemStyles>
   )
 }
