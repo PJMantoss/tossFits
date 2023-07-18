@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import NavStyles from './styles/NavStyles';
+import { useUser } from './User';
 
 function Nav() {
+  const user = useUser();
   return (
     <NavStyles>
         <Link href='/products'>Products</Link>
