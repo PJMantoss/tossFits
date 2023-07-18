@@ -12,11 +12,14 @@ function Nav() {
         <Link href='/products'>Products</Link>
         {user && (
           <>
-          <Link href='/sell'>sell</Link>
-          <Link href='/orders'>Orders</Link>
-          <Link href='/account'>Account</Link></>
+            <Link href='/sell'>sell</Link>
+            <Link href='/orders'>Orders</Link>
+            <Link href='/account'>Account</Link>
+          </>
         )}
-        {!user && ()}
+        {!user && (
+          <Link href='/signin'>Sign In</Link>
+        )}
     </NavStyles>
   )
 }
