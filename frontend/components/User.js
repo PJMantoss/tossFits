@@ -7,6 +7,7 @@ const CURRENT_USER_QUERY = gql`
                 id
                 email
                 name
+                # Query the Cart once its created
             }
         }
     }
