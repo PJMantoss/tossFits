@@ -13,7 +13,7 @@ export const CURRENT_USER_QUERY = gql`
     }
 `;
 
-export default function useUser(){
+export function useUser(){
     const { data } = useQuery(CURRENT_USER_QUERY);
     return data?.authenticatedItem;
 }
