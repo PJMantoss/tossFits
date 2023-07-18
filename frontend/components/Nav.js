@@ -6,13 +6,17 @@ import { useUser } from './User';
 function Nav() {
   const user = useUser();
   console.log(user);
-  
+
   return (
     <NavStyles>
         <Link href='/products'>Products</Link>
-        <Link href='/sell'>sell</Link>
-        <Link href='/orders'>Orders</Link>
-        <Link href='/account'>Account</Link>
+        {user && (
+          <>
+          <Link href='/sell'>sell</Link>
+          <Link href='/orders'>Orders</Link>
+          <Link href='/account'>Account</Link></>
+        )}
+        {!user && ()}
     </NavStyles>
   )
 }
