@@ -2,7 +2,7 @@ import Form from './styles/Form';
 
 export default function SignIn(){
     return (
-        <Form>
+        <Form method="POST">
             <fieldset>
                 <label>
                     Email
@@ -10,6 +10,7 @@ export default function SignIn(){
                         type="email" 
                         name="email" 
                         placeholder='Your Email Address' 
+                        autocomplete='email'
                     />
                 </label>
 
@@ -18,9 +19,12 @@ export default function SignIn(){
                     <input 
                         type="password" 
                         name="password" 
-                        placeholder='Your Password' 
+                        placeholder='Your Password'
+                        autocomplete='password'
                     />
                 </label>
+
+                <button type="submit">Sign In</button>
             </fieldset>
         </Form>
     )
