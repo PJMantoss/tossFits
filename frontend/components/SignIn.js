@@ -3,7 +3,16 @@ import Form from './styles/Form';
 export default function SignIn(){
     return (
         <Form>
-            <p>test</p>
+            <fieldset>
+                <label>
+                    Email
+                    <input 
+                        type="password" 
+                        name="password" 
+                        placeholder='Your Email Address' 
+                    />
+                </label>
+            </fieldset>
         </Form>
     )
 }
