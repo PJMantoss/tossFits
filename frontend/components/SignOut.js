@@ -23,4 +23,4 @@ function SignOut() {
   )
 }
 
-export default SignOut
+export default SignOut;
