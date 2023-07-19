@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function SignOut({ children }) {
   return (
-    <button type="button">SignOut</button>
+    <button type="button">Sign Out</button>
   )
 }
 
