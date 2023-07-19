@@ -51,7 +51,7 @@ export default function SignIn(){
     return (
         <Form method="POST" onSubmit={handleSubmit}>
             <h2>Sign into Your Account</h2>
-            <Error />
+            <Error error={error} />
             <fieldset>
                 <label htmlFor='email'>
                     Email
