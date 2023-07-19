@@ -2,13 +2,29 @@ import Form from './styles/Form';
 import useForm from '../lib/useForm';
 import gql from 'graphql-tag';
 
-const SIGN_IN_MUTATION = gql``;
+const SIGNIN_MUTATION = gql`
+    mutation SIGNIN_MUTATION ($email: String!, $password: String!){
+        ... on UserAuthenticationWithPasswordSuccess{
+            item {
+                id
+                email
+                name
+            }
+        }
+    }
+`;
 
 export default function SignIn(){
     const { inputs, handleChange, resetForm } = useForm({
         email: '',
         password: ''
     });
+
+    const [signin, {error, loading}] = useMutation(SIGNIN_MUTATION, {
+        variables: {
+            inputs
+        }
+    })
 
     function handleSubmit(e){
         e.preventDefault();
