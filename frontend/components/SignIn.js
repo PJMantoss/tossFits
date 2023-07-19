@@ -7,9 +7,18 @@ export default function SignIn(){
                 <label>
                     Email
                     <input 
+                        type="email" 
+                        name="email" 
+                        placeholder='Your Email Address' 
+                    />
+                </label>
+
+                <label>
+                    Password
+                    <input 
                         type="password" 
                         name="password" 
-                        placeholder='Your Email Address' 
+                        placeholder='Your Password' 
                     />
                 </label>
             </fieldset>
