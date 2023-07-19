@@ -2,6 +2,7 @@ import Form from './styles/Form';
 import useForm from '../lib/useForm';
 import gql from 'graphql-tag';
 import { CURRENT_USER_QUERY } from './User';
+import { useMutation } from '@apollo/client';
 
 const SIGNIN_MUTATION = gql`
     mutation SIGNIN_MUTATION ($email: String!, $password: String!){
@@ -28,9 +29,12 @@ export default function SignIn(){
         refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
 
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault();
         console.log(inputs);
+        const res = await signin();
+        console.log(res);
+        resetForm();
     }
 
     return (
