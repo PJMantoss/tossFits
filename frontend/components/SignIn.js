@@ -14,6 +14,13 @@ const SIGNIN_MUTATION = gql`
                     name
                 }
             }
+
+            ... on UserAuthenticationWithPasswordFailure{
+                item {
+                    code
+                    message
+                }
+            }
         }
     }
 `;
@@ -24,7 +31,7 @@ export default function SignIn(){
         password: ''
     });
 
-    const [signin, {error, loading}] = useMutation(SIGNIN_MUTATION, {
+    const [signin, {data, loading}] = useMutation(SIGNIN_MUTATION, {
         variables: inputs,
         refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
@@ -37,8 +44,14 @@ export default function SignIn(){
         resetForm();
     }
 
+    const error = data?.authenticateUserWithPassword.__typename ===
+                'UserAuthenticationWithPasswordFailure' ?
+                data?.authenticateUserWithPassword : undefined;
+
     return (
         <Form method="POST" onSubmit={handleSubmit}>
+            <h2>Sign into Your Account</h2>
+            <Error />
             <fieldset>
                 <label htmlFor='email'>
                     Email
