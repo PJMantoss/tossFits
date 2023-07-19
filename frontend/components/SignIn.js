@@ -3,6 +3,7 @@ import useForm from '../lib/useForm';
 import gql from 'graphql-tag';
 import { CURRENT_USER_QUERY } from './User';
 import { useMutation } from '@apollo/client';
+import Error from './ErrorMessage';
 
 const SIGNIN_MUTATION = gql`
     mutation SIGNIN_MUTATION ($email: String!, $password: String!){
