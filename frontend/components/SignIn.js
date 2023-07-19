@@ -23,7 +23,7 @@ export default function SignIn(){
                         placeholder='Your Email Address' 
                         autocomplete='email'
                         value={inputs.email}
-                        onchange={handleChange}
+                        onChange={handleChange}
                     />
                 </label>
 
@@ -35,7 +35,7 @@ export default function SignIn(){
                         placeholder='Your Password'
                         autocomplete='password'
                         value={inputs.password}
-                        onchange={handleChange}
+                        onChange={handleChange}
                     />
                 </label>
 
