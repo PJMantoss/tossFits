@@ -6,8 +6,14 @@ export default function SignIn(){
         email: '',
         password: ''
     });
+
+    function handleSubmit(e){
+        e.preventDefault();
+        console.log(inputs);
+    }
+
     return (
-        <Form method="POST">
+        <Form method="POST" onSubmit={handleSubmit}>
             <fieldset>
                 <label>
                     Email
@@ -16,6 +22,8 @@ export default function SignIn(){
                         name="email" 
                         placeholder='Your Email Address' 
                         autocomplete='email'
+                        value={inputs.email}
+                        change={handleChange}
                     />
                 </label>
 
@@ -26,6 +34,8 @@ export default function SignIn(){
                         name="password" 
                         placeholder='Your Password'
                         autocomplete='password'
+                        alue={inputs.password}
+                        change={handleChange}
                     />
                 </label>
 
