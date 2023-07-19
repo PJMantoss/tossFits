@@ -1,6 +1,7 @@
 import Form from './styles/Form';
 import useForm from '../lib/useForm';
 import gql from 'graphql-tag';
+import { CURRENT_USER_QUERY } from './User';
 
 const SIGNIN_MUTATION = gql`
     mutation SIGNIN_MUTATION ($email: String!, $password: String!){
@@ -21,9 +22,8 @@ export default function SignIn(){
     });
 
     const [signin, {error, loading}] = useMutation(SIGNIN_MUTATION, {
-        variables: {
-            inputs
-        }
+        variables: inputs,
+        refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
 
     function handleSubmit(e){
