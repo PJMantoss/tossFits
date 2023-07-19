@@ -1,5 +1,8 @@
 import Form from './styles/Form';
 import useForm from '../lib/useForm';
+import gql from 'graphql-tag';
+
+const SIGN_IN_MUTATION = gql``;
 
 export default function SignIn(){
     const { inputs, handleChange, resetForm } = useForm({
@@ -15,7 +18,7 @@ export default function SignIn(){
     return (
         <Form method="POST" onSubmit={handleSubmit}>
             <fieldset>
-                <label>
+                <label htmlFor='email'>
                     Email
                     <input 
                         type="email" 
@@ -27,7 +30,7 @@ export default function SignIn(){
                     />
                 </label>
 
-                <label>
+                <label htmlFor='password'>
                     Password
                     <input 
                         type="password" 
