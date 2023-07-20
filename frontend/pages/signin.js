@@ -3,10 +3,14 @@ import SignIn from '../components/SignIn';
 import SignUp from '../components/SignUp';
 import styled from 'styled-components';
 
+const GridStyle = styled.div``;
+
 function signin() {
   return (
-    <SignIn />
-    <SignUp />
+    <GridStyle>
+      <SignIn />
+      <SignUp />
+    </GridStyle>
   )
 }
 
