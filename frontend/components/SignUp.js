@@ -55,6 +55,18 @@ export default function SignUp(){
             <h2>Register for an Account</h2>
             <Error error={error} />
             <fieldset>
+                <label htmlFor='name'>
+                    Name
+                    <input 
+                        type="name" 
+                        name="name" 
+                        placeholder='Your Name' 
+                        autocomplete='name'
+                        value={inputs.name}
+                        onChange={handleChange}
+                    />
+                </label>
+
                 <label htmlFor='email'>
                     Email
                     <input 
