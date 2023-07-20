@@ -22,15 +22,15 @@ export default function SignUp(){
         password: ''
     });
 
-    const [signin, {data, loading}] = useMutation(SIGNIN_MUTATION, {
+    const [signup, {data, loading}] = useMutation(SIGNUP_MUTATION, {
         variables: inputs,
-        refetchQueries: [{ query: CURRENT_USER_QUERY }]
+        //refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
 
     async function handleSubmit(e){
         e.preventDefault();
         console.log(inputs);
-        const res = await signin();
+        const res = await signup();
         console.log(res);
         resetForm();
     }
