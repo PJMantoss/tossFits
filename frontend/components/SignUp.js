@@ -5,24 +5,9 @@ import { CURRENT_USER_QUERY } from './User';
 import { useMutation } from '@apollo/client';
 import Error from './ErrorMessage';
 
-const SIGNIN_MUTATION = gql`
-    mutation SIGNIN_MUTATION ($email: String!, $password: String!){
-        authenticateUserWithPassword(email: $email, password: $password){
-            ... on UserAuthenticationWithPasswordSuccess{
-                item {
-                    id
-                    email
-                    name
-                }
-            }
-
-            ... on UserAuthenticationWithPasswordFailure{
-                item {
-                    code
-                    message
-                }
-            }
-        }
+const SIGNUP_MUTATION = gql`
+    mutation SIGNUP_MUTATION ($name: String! $email: String!, $password: String!){
+        createUser(data: {name: $name, email: $email, password: $password})
     }
 `;
 
