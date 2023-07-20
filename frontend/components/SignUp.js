@@ -45,6 +45,11 @@ export default function SignUp(){
             <h2>Register for an Account</h2>
             <Error error={error} />
             <fieldset>
+                {data?.createUser &&(
+                    <p>
+                        Signed Up with {data.createUser.email} - Please Go ahead and Sign in!
+                    </p>
+                )}
                 <label htmlFor='name'>
                     Name
                     <input 
