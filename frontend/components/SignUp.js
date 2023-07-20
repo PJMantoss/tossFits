@@ -22,7 +22,7 @@ export default function SignUp(){
         password: ''
     });
 
-    const [signup, {data, loading}] = useMutation(SIGNUP_MUTATION, {
+    const [signup, {data, loading, error}] = useMutation(SIGNUP_MUTATION, {
         variables: inputs,
         //refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
@@ -33,11 +33,12 @@ export default function SignUp(){
         const res = await signup();
         console.log(res);
         resetForm();
+        console.log(error);
     }
 
-    const error = data?.authenticateUserWithPassword.__typename ===
-                'UserAuthenticationWithPasswordFailure' ?
-                data?.authenticateUserWithPassword : undefined;
+    // const error = data?.authenticateUserWithPassword.__typename ===
+    //             'UserAuthenticationWithPasswordFailure' ?
+    //             data?.authenticateUserWithPassword : undefined;
 
     return (
         <Form method="POST" onSubmit={handleSubmit}>
