@@ -38,9 +38,9 @@ export default function Reset(){
             <h2>Reset a Password</h2>
             <Error error={error} />
             <fieldset>
-                {data?.sendUserPasswordResetLink === null &&(
+                {data?.redeemUserPasswordResetToken === null &&(
                     <p>
-                        Success! Check Your email for a link!
+                        Success! You can now sign in
                     </p>
                 )}
                 
