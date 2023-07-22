@@ -19,7 +19,7 @@ export default function RequestReset(){
         email: '',
     });
 
-    const [signup, {data, loading, error}] = useMutation(REQUEST_RESET_MUTATION, {
+    const [resetRequest, {data, loading, error}] = useMutation(REQUEST_RESET_MUTATION, {
         variables: inputs,
         //refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
@@ -27,7 +27,7 @@ export default function RequestReset(){
     async function handleSubmit(e){
         e.preventDefault();
         console.log(inputs);
-        const res = await signup();
+        const res = await resetRequest();
         console.log(res);
         resetForm();
         console.log(error);
