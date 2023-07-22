@@ -5,12 +5,11 @@ import { CURRENT_USER_QUERY } from './User';
 import { useMutation } from '@apollo/client';
 import Error from './ErrorMessage';
 
-const REQUESTRESET_MUTATION = gql`
-    mutation REQUESTRESET_MUTATION ($name: String! $email: String!, $password: String!){
-        createUser(data: {name: $name, email: $email, password: $password}){
+const REQUEST_RESET_MUTATION = gql`
+    mutation REQUEST_RESET_MUTATION ($email: String!){
+        sendUserPasswordResetLink(email: $email){
             id
             email
-            name
         }
     }
 `;
