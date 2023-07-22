@@ -19,7 +19,7 @@ export default function RequestReset(){
         email: '',
     });
 
-    const [signup, {data, loading, error}] = useMutation(SIGNUP_MUTATION, {
+    const [signup, {data, loading, error}] = useMutation(REQUEST_RESET_MUTATION, {
         variables: inputs,
         //refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
