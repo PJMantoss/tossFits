@@ -7,7 +7,7 @@ import Error from './ErrorMessage';
 
 const RESET_MUTATION = gql`
     mutation RESET_MUTATION ($email: String!){
-        sendUserPasswordResetLink(email: $email){
+        redeemUserPasswordResetToken(email: $email, token: $token){
             code
             message
         }
@@ -19,7 +19,7 @@ export default function Reset(){
         email: '',
     });
 
-    const [signup, {data, loading, error}] = useMutation(REQUEST_RESET_MUTATION, {
+    const [signup, {data, loading, error}] = useMutation(RESET_MUTATION, {
         variables: inputs,
         //refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
