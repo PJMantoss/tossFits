@@ -8,8 +8,8 @@ import Error from './ErrorMessage';
 const REQUEST_RESET_MUTATION = gql`
     mutation REQUEST_RESET_MUTATION ($email: String!){
         sendUserPasswordResetLink(email: $email){
-            id
-            email
+            code
+            message
         }
     }
 `;
