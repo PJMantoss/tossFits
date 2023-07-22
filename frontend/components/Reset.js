@@ -6,10 +6,11 @@ import { useMutation } from '@apollo/client';
 import Error from './ErrorMessage';
 
 const RESET_MUTATION = gql`
-    mutation RESET_MUTATION ($email: String!){
-        redeemUserPasswordResetToken(email: $email, token: $token){
-            code
-            message
+    mutation RESET_MUTATION ($email: String!, $token: String!, $password: String!){
+        redeemUserPasswordResetToken(email: $email, token: $token, password: $password){
+            email
+            password
+            token
         }
     }
 `;
@@ -19,15 +20,14 @@ export default function Reset(){
         email: '',
     });
 
-    const [signup, {data, loading, error}] = useMutation(RESET_MUTATION, {
+    const [reset, {data, loading, error}] = useMutation(RESET_MUTATION, {
         variables: inputs,
-        //refetchQueries: [{ query: CURRENT_USER_QUERY }]
     })
 
     async function handleSubmit(e){
         e.preventDefault();
         console.log(inputs);
-        const res = await signup();
+        const res = await reset();
         console.log(res);
         resetForm();
         console.log(error);
