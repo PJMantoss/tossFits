@@ -1,5 +1,6 @@
 import React from 'react';
 import RequestReset from '../components/RequestReset';
+import Reset from '../components/Reset';
 
 function resetPage({query}) {
     //console.log(props);
@@ -14,6 +15,7 @@ function resetPage({query}) {
   return (
     <div>
         <p>Reset Your Password</p>
+        <Reset />
     </div>
   )
 }
