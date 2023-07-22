@@ -42,9 +42,9 @@ export default function RequestReset(){
             <h2>Request a Password Reset</h2>
             <Error error={error} />
             <fieldset>
-                {data?.sendUserPasswordResetLink &&(
+                {data?.sendUserPasswordResetLink === null &&(
                     <p>
-                        Signed Up with {data.createUser.email} - Please Go ahead and Sign in!
+                        Success! Check Your email for a link!
                     </p>
                 )}
                 
