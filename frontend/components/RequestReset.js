@@ -5,8 +5,8 @@ import { CURRENT_USER_QUERY } from './User';
 import { useMutation } from '@apollo/client';
 import Error from './ErrorMessage';
 
-const SIGNUP_MUTATION = gql`
-    mutation SIGNUP_MUTATION ($name: String! $email: String!, $password: String!){
+const REQUESTRESET_MUTATION = gql`
+    mutation REQUESTRESET_MUTATION ($name: String! $email: String!, $password: String!){
         createUser(data: {name: $name, email: $email, password: $password}){
             id
             email
@@ -15,7 +15,7 @@ const SIGNUP_MUTATION = gql`
     }
 `;
 
-export default function SignUp(){
+export default function RequestReset(){
     const { inputs, handleChange, resetForm } = useForm({
         name: '',
         email: '',
