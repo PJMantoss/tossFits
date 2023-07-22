@@ -33,10 +33,6 @@ export default function Reset(){
         console.log(error);
     }
 
-    // const error = data?.authenticateUserWithPassword.__typename ===
-    //             'UserAuthenticationWithPasswordFailure' ?
-    //             data?.authenticateUserWithPassword : undefined;
-
     return (
         <Form method="POST" onSubmit={handleSubmit}>
             <h2>Reset a Password</h2>
