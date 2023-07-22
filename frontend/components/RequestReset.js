@@ -17,9 +17,7 @@ const REQUESTRESET_MUTATION = gql`
 
 export default function RequestReset(){
     const { inputs, handleChange, resetForm } = useForm({
-        name: '',
         email: '',
-        password: ''
     });
 
     const [signup, {data, loading, error}] = useMutation(SIGNUP_MUTATION, {
@@ -42,7 +40,7 @@ export default function RequestReset(){
 
     return (
         <Form method="POST" onSubmit={handleSubmit}>
-            <h2>Register for an Account</h2>
+            <h2>Request a Password Reset</h2>
             <Error error={error} />
             <fieldset>
                 {data?.createUser &&(
