@@ -20,9 +20,13 @@ export default function Reset(){
         email: '',
     });
 
-    const [reset, {data, loading, error}] = useMutation(RESET_MUTATION, {
+    const [reset, {data, loading}] = useMutation(RESET_MUTATION, {
         variables: inputs,
-    })
+    });
+
+    const error = data?.redeemUserPasswordResetToken?.code 
+        ? data?.redeemUserPasswordResetToken 
+        : undefined;
 
     async function handleSubmit(e){
         e.preventDefault();
