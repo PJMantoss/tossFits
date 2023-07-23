@@ -30,7 +30,7 @@ interface MailResponse{
     message: string
 }
 
-async function sendPasswordResetEmail(resetToken: string, to: string){
+async function sendPasswordResetEmail(resetToken: string, to: string): Promise<void>{
     // email the user a token
     const info = (await transporter.sendMail({
         to,
@@ -41,4 +41,5 @@ async function sendPasswordResetEmail(resetToken: string, to: string){
             <a href="${process.env.FRONTEND_URL}/reset?token=${resetToken}">Click Here to Reset</a>
         `)
     })) as MailResponse;
+    console.log(info);
 }
