@@ -26,6 +26,10 @@ function makeANiceEmail(text: string): string{
     `;
 }
 
+interface MailResponse{
+    message: string
+}
+
 async function sendPasswordResetEmail(resetToken: string, to: string){
     // email the user a token
     const info = await transporter.sendMail({
