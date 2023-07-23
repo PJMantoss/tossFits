@@ -32,6 +32,9 @@ async function sendPasswordResetEmail(resetToken: string, to: string){
         to,
         from: "test@example.com",
         subject: "Your Password Reset Token",
-        html: makeANiceEmail()
+        html: makeANiceEmail(`
+            "Your Password Reset Token is Here"
+            <a href="${process.env.FRONTEND_URL}">Click Here to Reset</a>
+        `)
     });
 }
