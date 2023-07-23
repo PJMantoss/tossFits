@@ -10,7 +10,7 @@ const transporter = createTransport({
     }
 });
 
-function makeANiceEmail(text: string){
+function makeANiceEmail(text: string): string{
     return `
         <div style="
             border: 1px solid black;
@@ -34,7 +34,7 @@ async function sendPasswordResetEmail(resetToken: string, to: string){
         subject: "Your Password Reset Token",
         html: makeANiceEmail(`
             "Your Password Reset Token is Here"
-            <a href="${process.env.FRONTEND_URL}">Click Here to Reset</a>
+            <a href="${process.env.FRONTEND_URL}/reset?token=${resetToken}">Click Here to Reset</a>
         `)
     });
 }
