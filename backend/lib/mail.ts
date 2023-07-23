@@ -28,4 +28,10 @@ function makeANiceEmail(text: string){
 
 async function sendPasswordResetEmail(resetToken: string, to: string){
     // email the user a token
+    const info = await transporter.sendMail({
+        to,
+        from: "test@example.com",
+        subject: "Your Password Reset Token",
+        html: makeANiceEmail()
+    });
 }
