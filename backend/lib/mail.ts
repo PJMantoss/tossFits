@@ -32,7 +32,7 @@ interface MailResponse{
 
 async function sendPasswordResetEmail(resetToken: string, to: string){
     // email the user a token
-    const info = await transporter.sendMail({
+    const info = (await transporter.sendMail({
         to,
         from: "test@example.com",
         subject: "Your Password Reset Token",
@@ -40,5 +40,5 @@ async function sendPasswordResetEmail(resetToken: string, to: string){
             "Your Password Reset Token is Here"
             <a href="${process.env.FRONTEND_URL}/reset?token=${resetToken}">Click Here to Reset</a>
         `)
-    });
+    })) as MailResponse;
 }
