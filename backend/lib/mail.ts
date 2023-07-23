@@ -10,7 +10,7 @@ const transporter = createTransport({
     }
 });
 
-function makeNiceEmail(text: string){
+function makeANiceEmail(text: string){
     return `
         <div style="
             border: 1px solid black;
