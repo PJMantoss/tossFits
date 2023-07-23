@@ -30,7 +30,7 @@ interface MailResponse{
     message: string
 }
 
-async function sendPasswordResetEmail(resetToken: string, to: string): Promise<void>{
+export async function sendPasswordResetEmail(resetToken: string, to: string): Promise<void>{
     // email the user a token
     const info = (await transporter.sendMail({
         to,
