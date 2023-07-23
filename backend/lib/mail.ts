@@ -25,3 +25,7 @@ function makeANiceEmail(text: string){
         </div>
     `;
 }
+
+async function sendPasswordResetEmail(resetToken: string, to: string){
+    // email the user a token
+}
