@@ -60,7 +60,7 @@ export default function SignIn(){
                         type="email" 
                         name="email" 
                         placeholder='Your Email Address' 
-                        autocomplete='email'
+                        autoComplete='email'
                         value={inputs.email}
                         onChange={handleChange}
                     />
@@ -72,7 +72,7 @@ export default function SignIn(){
                         type="password" 
                         name="password" 
                         placeholder='Your Password'
-                        autocomplete='password'
+                        autoComplete='password'
                         value={inputs.password}
                         onChange={handleChange}
                     />
