@@ -31,6 +31,7 @@ interface MailResponse{
     rejected?: (null)[] | null;
     envelopeTime: number;
     messageTime: number;
+    messageSize: number;
 }
 
 export async function sendPasswordResetEmail(resetToken: string, to: string): Promise<void>{
