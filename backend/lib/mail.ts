@@ -1,4 +1,4 @@
-import { createTransport } from "nodemailer";
+import { createTransport, getTestMessageUrl } from "nodemailer";
 //import "dotenv/config";
 
 const transporter = createTransport({
@@ -54,5 +54,7 @@ export async function sendPasswordResetEmail(resetToken: string, to: string): Pr
         `)
     })) as MailResponse;
     //console.log(info);
-    if(process.env.MAIL_USER.includes('ethereal.email'))
+    if(process.env.MAIL_USER.includes('ethereal.email')){
+        console.log(`Message sent! Preview it at ${getTestMessageUrl(info)}`);
+    }
 }
