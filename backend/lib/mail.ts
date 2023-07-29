@@ -38,7 +38,7 @@ interface MailResponse{
 }
 
 export interface Envelope{
-    from: (string)[];
+    from: string;
     to?: (string)[];
 }
 
