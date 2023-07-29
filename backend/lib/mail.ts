@@ -32,6 +32,7 @@ interface MailResponse{
     envelopeTime: number;
     messageTime: number;
     messageSize: number;
+    response: string;
 }
 
 export async function sendPasswordResetEmail(resetToken: string, to: string): Promise<void>{
