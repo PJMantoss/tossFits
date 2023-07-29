@@ -27,7 +27,8 @@ function makeANiceEmail(text: string): string{
 }
 
 interface MailResponse{
-    message: string
+    accepted?: (string)[] | null;
+    rejected?: (null)[] | null;
 }
 
 export async function sendPasswordResetEmail(resetToken: string, to: string): Promise<void>{
