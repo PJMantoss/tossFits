@@ -56,7 +56,7 @@ export default function SignUp(){
                         type="name" 
                         name="name" 
                         placeholder='Your Name' 
-                        autocomplete='name'
+                        autoComplete='name'
                         value={inputs.name}
                         onChange={handleChange}
                     />
@@ -68,7 +68,7 @@ export default function SignUp(){
                         type="email" 
                         name="email" 
                         placeholder='Your Email Address' 
-                        autocomplete='email'
+                        autoComplete='email'
                         value={inputs.email}
                         onChange={handleChange}
                     />
@@ -80,7 +80,7 @@ export default function SignUp(){
                         type="password" 
                         name="password" 
                         placeholder='Your Password'
-                        autocomplete='password'
+                        autoComplete='password'
                         value={inputs.password}
                         onChange={handleChange}
                     />
