@@ -7,6 +7,7 @@ import { ProductImage } from './schemas/ProductImage';
 import 'dotenv/config';
 import { insertSeedData } from './seed-data';
 import { sendPasswordResetEmail } from './lib/mail';
+import { CartItem } from './schemas/Cart';
 
 const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/keystone-toss-fits-tutorial';
 
@@ -57,6 +58,7 @@ export default withAuth(
         User,
         Product,
         ProductImage,
+        CartItem
     }),
     ui: {
         // Show the UI only for people who have passed the test
