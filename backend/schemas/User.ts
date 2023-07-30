@@ -4,7 +4,9 @@ import { CartItem } from "./Cart";
 
 export const User = list({
     // access
-    // ui
+    ui: {
+        listView: {}
+    }
 
     fields: {
         name: text({ isRequired: true }),
