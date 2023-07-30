@@ -6,7 +6,7 @@ export const User = list({
     // access
     ui: {
         listView: {}
-    }
+    },
 
     fields: {
         name: text({ isRequired: true }),
