@@ -3,9 +3,11 @@ import { list } from '@keystone-next/keystone/schema';
 
 export const CartItem = list({
     ui: {
-        listView: {}
+        listView: {
+            initialColumns: [ 'product' ],
+        }
     },
-    
+
     fields: {
         // Todo: Custom Lael in here
         quantity: integer({
