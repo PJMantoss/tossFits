@@ -14,7 +14,7 @@ export const User = list({
             ref: 'CartItem.user',
             many: true,
             ui: {
-                createView: {},
+                createView: { fieldMode: 'hidden' },
                 itemView: {}
             }
         }),
