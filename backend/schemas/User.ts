@@ -15,7 +15,7 @@ export const User = list({
             many: true,
             ui: {
                 createView: { fieldMode: 'hidden' },
-                itemView: {}
+                itemView: { fieldMode: 'read' }
             }
         }),
         // Add roles, cart and orders
