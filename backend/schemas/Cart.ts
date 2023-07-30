@@ -2,6 +2,10 @@ import { text, select, integer, relationship } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
 
 export const CartItem = list({
+    ui: {
+        listView: {}
+    },
+    
     fields: {
         // Todo: Custom Lael in here
         quantity: integer({
