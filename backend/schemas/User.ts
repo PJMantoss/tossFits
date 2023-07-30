@@ -9,7 +9,11 @@ export const User = list({
         name: text({ isRequired: true }),
         email: text({ isRequired: true, isUnique: true }),
         password: password({ isRequired: true }),
-        cart: relationship({}),
+        cart: relationship({
+            ref,
+            many,
+            ui
+        }),
         // Add roles, cart and orders
     }
 });
