@@ -8,6 +8,14 @@ export const CURRENT_USER_QUERY = gql`
                 email
                 name
                 # Query the Cart once its created
+                cart {
+                    id
+                    quantity
+                    product {
+                        id
+                        price {}
+                    }
+                }
             }
         }
     }
