@@ -1,9 +1,10 @@
 import CartStyles from "./styles/CartStyles";
 
 export default function Cart(){
+    const me = useUser();
     return(
-        <CartStyles>
-            {}
+        <CartStyles open>
+            Hi!
         </CartStyles>
     )
 }
