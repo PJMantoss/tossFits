@@ -13,7 +13,12 @@ export const CURRENT_USER_QUERY = gql`
                     quantity
                     product {
                         id
-                        price {}
+                        price
+                        photo {
+                            image {
+
+                            }
+                        }
                     }
                 }
             }
