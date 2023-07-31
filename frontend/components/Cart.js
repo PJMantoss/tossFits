@@ -4,6 +4,7 @@ import { useUser } from './User';
 export default function Cart(){
     const me = useUser();
     if(!me) return null;
+    console.log(me);
     return(
         <CartStyles open>
             {me.email}
