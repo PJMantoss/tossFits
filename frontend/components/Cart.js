@@ -10,9 +10,12 @@ export default function Cart(){
         <CartStyles open>
             <header>
                 <Supreme>
-                    {me.name}'s cart 
+                    {me.name}'s Cart 
                 </Supreme>
             </header>
+            <ul>
+                {}
+            </ul>
         </CartStyles>
     )
 }
