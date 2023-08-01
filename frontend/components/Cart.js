@@ -1,6 +1,6 @@
 import CartStyles from "./styles/CartStyles";
 import { useUser } from './User';
-
+import Supreme from './styles/Supreme';
 
 export default function Cart(){
     const me = useUser();
@@ -8,8 +8,9 @@ export default function Cart(){
     console.log(me);
     return(
         <CartStyles open>
-            <header></header>
-            {me.email}
+            <header>
+                
+            </header>
         </CartStyles>
     )
 }
