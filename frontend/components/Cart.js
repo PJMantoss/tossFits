@@ -3,7 +3,7 @@ import { useUser } from './User';
 import Supreme from './styles/Supreme';
 
 function CartItem({ cartItem }){
-    return
+    return <li></li>
 }
 
 export default function Cart(){
