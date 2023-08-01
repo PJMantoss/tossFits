@@ -57,6 +57,11 @@ export default function Cart(){
                     ))
                 }
             </ul>
+            <footer>
+                <p>
+                    {formatMoney(calcTotalPrice())}
+                </p>
+            </footer>
         </CartStyles>
     )
 }
