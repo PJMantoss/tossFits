@@ -21,6 +21,7 @@ function CartItem({ cartItem }){
     return (
         <CartItemStyles>
             <img 
+                width='100'
                 src={product.photo.image.publicUrlTransformed}
                 alt={product.name}
             />
