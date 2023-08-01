@@ -25,6 +25,10 @@ function CartItem({ cartItem }){
                 src={product.photo.image.publicUrlTransformed}
                 alt={product.name}
             />
+            <div>
+                <h3>{product.name}</h3>
+                <p>{product.price}</p>
+            </div>
         </CartItemStyles>
     )
 }
