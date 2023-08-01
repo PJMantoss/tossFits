@@ -59,7 +59,7 @@ export default function Cart(){
             </ul>
             <footer>
                 <p>
-                    {formatMoney(calcTotalPrice())}
+                    {formatMoney(calcTotalPrice(me.cart))}
                 </p>
             </footer>
         </CartStyles>
