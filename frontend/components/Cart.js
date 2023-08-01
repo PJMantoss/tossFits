@@ -4,6 +4,7 @@ import Supreme from './styles/Supreme';
 import styled from 'styled-components';
 
 const CartItemStyles = styled.li`
+    padding: 1rem 0;
     h3, p {
         margin: 0;
     }
