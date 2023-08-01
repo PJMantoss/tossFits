@@ -27,7 +27,7 @@ function CartItem({ cartItem }){
             />
             <div>
                 <h3>{product.name}</h3>
-                <p>{product.price}</p>
+                <p>{product.price * cartItem.quantity}</p>
             </div>
         </CartItemStyles>
     )
