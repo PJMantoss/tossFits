@@ -2,6 +2,10 @@ import CartStyles from "./styles/CartStyles";
 import { useUser } from './User';
 import Supreme from './styles/Supreme';
 
+function CartItem({ cartItem }){
+    return
+}
+
 export default function Cart(){
     const me = useUser();
     if(!me) return null;
@@ -14,7 +18,9 @@ export default function Cart(){
                 </Supreme>
             </header>
             <ul>
-                {}
+                {
+                    me.cartItem.map(cartItem => <CartItem />)
+                }
             </ul>
         </CartStyles>
     )
