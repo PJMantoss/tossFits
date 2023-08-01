@@ -4,7 +4,9 @@ import Supreme from './styles/Supreme';
 import styled from 'styled-components';
 
 const CartItemStyles = styled.li`
-    
+    h3, p {
+        margin: 0;
+    }
 `;
 
 function CartItem({ cartItem }){
