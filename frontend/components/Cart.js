@@ -11,9 +11,9 @@ const CartItemStyles = styled.li`
 
 function CartItem({ cartItem }){
     return (
-        <li>
+        <CartItemStyles>
             {cartItem.id}
-        </li>
+        </CartItemStyles>
     )
 }
 
