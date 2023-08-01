@@ -1,6 +1,11 @@
 import CartStyles from "./styles/CartStyles";
 import { useUser } from './User';
 import Supreme from './styles/Supreme';
+import styled from 'styled-components';
+
+const CartItemStyles = styled.li`
+    
+`;
 
 function CartItem({ cartItem }){
     return (
