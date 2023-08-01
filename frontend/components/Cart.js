@@ -2,6 +2,7 @@ import CartStyles from "./styles/CartStyles";
 import { useUser } from './User';
 import Supreme from './styles/Supreme';
 import styled from 'styled-components';
+import formatMoney from '../lib/formatMoney';
 
 const CartItemStyles = styled.li`
     display: 'grid';
@@ -27,7 +28,7 @@ function CartItem({ cartItem }){
             />
             <div>
                 <h3>{product.name}</h3>
-                <p>{product.price * cartItem.quantity}</p>
+                <p>{formatMoney(product.price * cartItem.quantity)}</p>
             </div>
         </CartItemStyles>
     )
