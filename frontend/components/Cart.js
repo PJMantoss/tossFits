@@ -3,6 +3,7 @@ import { useUser } from './User';
 import Supreme from './styles/Supreme';
 import styled from 'styled-components';
 import formatMoney from '../lib/formatMoney';
+import calcTotalPrice from '../lib/calcTotalPrice';
 
 const CartItemStyles = styled.li`
     display: 'grid';
