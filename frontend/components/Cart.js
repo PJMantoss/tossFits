@@ -9,7 +9,9 @@ export default function Cart(){
     return(
         <CartStyles open>
             <header>
-                
+                <Supreme>
+                    {me.name}'s cart 
+                </Supreme>
             </header>
         </CartStyles>
     )
