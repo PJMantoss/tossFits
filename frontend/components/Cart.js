@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const CartItemStyles = styled.li`
     display: 'grid';
-    grid-template-columns: 1fr auto
+    grid-template-columns: auto 1fr auto;
     padding: 1rem 0;
     border-bottom: 1px solid var(--lightGrey)
     h3, p {
