@@ -10,9 +10,13 @@ const CartItemStyles = styled.li`
 `;
 
 function CartItem({ cartItem }){
+    const { product } = cartItem;
     return (
         <CartItemStyles>
-            {cartItem.id}
+            <img 
+                src={}
+                alt 
+            />
         </CartItemStyles>
     )
 }
