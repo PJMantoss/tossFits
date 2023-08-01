@@ -15,7 +15,7 @@ function CartItem({ cartItem }){
         <CartItemStyles>
             <img 
                 src={product.image.publicUrlTransformed}
-                alt 
+                alt={product.name}
             />
         </CartItemStyles>
     )
