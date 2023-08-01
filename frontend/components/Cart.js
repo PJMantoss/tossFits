@@ -31,7 +31,7 @@ function CartItem({ cartItem }){
                 <p>
                     {formatMoney(product.price * cartItem.quantity)} - 
                     <em>
-                        {cartItem.quantity} &times; {formatMoney(product.price)}
+                        {cartItem.quantity} &times; {formatMoney(product.price)} each
                     </em>
                 </p>
             </div>
