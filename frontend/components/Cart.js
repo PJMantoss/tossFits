@@ -19,7 +19,7 @@ export default function Cart(){
             </header>
             <ul>
                 {
-                    me.cartItem.map(cartItem => <CartItem />)
+                    me.cartItem.map(cartItem => <CartItem cartItem={cartItem}/>)
                 }
             </ul>
         </CartStyles>
