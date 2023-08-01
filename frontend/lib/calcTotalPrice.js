@@ -1,3 +1,3 @@
 export default function calcTotalPrice(cart){
-    return cart.reduce()
+    return cart.reduce(tally, cartItem)
 }
