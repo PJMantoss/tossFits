@@ -23,6 +23,7 @@ function CartStateProvider({ children }){
                 cartOpen, 
                 setCartOpen,
                 toggleCart, 
+                closeCart
             }}
         >
             {children}
