@@ -19,7 +19,12 @@ function CartStateProvider({ children }){
     }
 
     return(
-        <LocalStateProvider value={{ cartOpen, setCartOpen }}>
+        <LocalStateProvider value={{ 
+                cartOpen, 
+                setCartOpen,
+                toggleCart, 
+            }}
+        >
             {children}
         </LocalStateProvider>
     );
