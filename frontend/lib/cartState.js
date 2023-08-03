@@ -12,3 +12,5 @@ function CartStateProvider({ children }){
         </LocalStateProvider>
     );
 }
+
+export { CartStateProvider };
