@@ -53,8 +53,9 @@ export default function Cart(){
                 <Supreme>
                     {me.name}'s Cart 
                 </Supreme>
+                <CloseButton onClick={closeCart}>&times;</CloseButton>
             </header>
-            <button onClick={closeCart}>&times;</button>
+            
             <ul>
                 {
                     me.cart.map(cartItem => (
