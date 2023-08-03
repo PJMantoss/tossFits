@@ -7,11 +7,11 @@ function CartStateProvider({ children }){
     const [ cartOpen, setCartOpen ] = useState(false);
 
     function toggleCart(){
-        setCartOpen();
+        setCartOpen(!cartOpen);
     }
 
     function closeCart(){
-        setCartOpen(!cartOpen);
+        setCartOpen(false);
     }
 
     function openCart(){
