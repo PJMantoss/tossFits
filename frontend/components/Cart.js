@@ -43,7 +43,7 @@ function CartItem({ cartItem }){
 
 export default function Cart(){
     const me = useUser();
-    const { cartOpen } = useCart();
+    const { cartOpen, closeCart } = useCart();
     if(!me) return null;
     console.log(me);
     return(
