@@ -1,6 +1,7 @@
 import CartStyles from "./styles/CartStyles";
 import { useUser } from './User';
 import Supreme from './styles/Supreme';
+import CloseButton from './styles/CloseButton';
 import styled from 'styled-components';
 import formatMoney from '../lib/formatMoney';
 import calcTotalPrice from '../lib/calcTotalPrice';
