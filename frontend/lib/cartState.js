@@ -19,4 +19,4 @@ function useCart(){
     return all;
 };
 
-export { CartStateProvider };
+export { CartStateProvider, useCart };
