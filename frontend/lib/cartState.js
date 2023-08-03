@@ -11,7 +11,7 @@ function CartStateProvider({ children }){
     }
 
     function closeCart(){
-        setCartOpen();
+        setCartOpen(!cartOpen);
     }
 
     function openCart(){
