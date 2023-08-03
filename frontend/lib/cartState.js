@@ -1,10 +1,12 @@
-import { createContext } from "react";
+import { useState, createContext } from "react";
 
 const LocalStateContext = createContext();
 const LocalStateProvider = LocalStateContext.Provider;
 
 function CartStateProvider({ children }){
     const cartOpen = true;
+
+    const [ cartOpen, setCartOpen ] = useState();
 
     return(
         <LocalStateProvider value={{ cartOpen }}>
