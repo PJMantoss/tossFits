@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import NavStyles from './styles/NavStyles';
 import { useUser } from './User';
+import SignOut from './SignOut';
 
 function Nav() {
   const user = useUser();
