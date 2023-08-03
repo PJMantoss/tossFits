@@ -15,7 +15,7 @@ function CartStateProvider({ children }){
     }
 
     function openCart(){
-        setCartOpen();
+        setCartOpen(true);
     }
 
     return(
