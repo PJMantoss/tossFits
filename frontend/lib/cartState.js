@@ -6,5 +6,9 @@ const LocalStateProvider = LocalStateContext.Provider;
 function CartStateProvider({ children }){
     const cartOpen = true;
 
-    return <LocalStateProvider></LocalStateProvider>
+    return(
+        <LocalStateProvider value={{ cartOpen }}>
+            {children}
+        </LocalStateProvider>
+    );
 }
