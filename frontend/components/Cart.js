@@ -47,7 +47,7 @@ export default function Cart(){
     if(!me) return null;
     console.log(me);
     return(
-        <CartStyles open>
+        <CartStyles open={ cartOpen }>
             <header>
                 <Supreme>
                     {me.name}'s Cart 
