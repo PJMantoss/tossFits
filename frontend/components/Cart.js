@@ -4,6 +4,7 @@ import Supreme from './styles/Supreme';
 import styled from 'styled-components';
 import formatMoney from '../lib/formatMoney';
 import calcTotalPrice from '../lib/calcTotalPrice';
+import { useCart } from "../lib/cartState";
 
 const CartItemStyles = styled.li`
     display: 'grid';
@@ -42,6 +43,7 @@ function CartItem({ cartItem }){
 
 export default function Cart(){
     const me = useUser();
+    const { cartOpen } = useCart();
     if(!me) return null;
     console.log(me);
     return(
