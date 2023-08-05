@@ -1,6 +1,10 @@
 import { graphQLSchemaExtension } from '@keystone-next/keystone/schema';
 
-export cont exportGraphQLSchema = graphQLSchemaExtension({
-    typedefs
+export const exportGraphQLSchema = graphQLSchemaExtension({
+    typeDefs:`
+        type mutation {
+            
+        }
+    `
     //resolvers
 })
