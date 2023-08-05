@@ -1,1 +1,3 @@
-export cont exportGraphQLSchema = graphQLSchemaExtension();
+export cont exportGraphQLSchema = graphQLSchemaExtension({
+    typedefs
+});
