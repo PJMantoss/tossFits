@@ -1,4 +1,5 @@
 import { graphQLSchemaExtension } from '@keystone-next/keystone/schema';
+import addToCart from './addToCart';
 
 // fake graphql tagged template literal string
 const graphql = String.raw;
