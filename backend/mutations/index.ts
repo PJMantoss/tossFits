@@ -12,7 +12,7 @@ export const extendGraphqlSchema = graphQLSchemaExtension({
     resolvers: {
         Mutation: {
             addToCart: function(){
-                
+                console.log('ADD TO CART')
             }
         }
     }
