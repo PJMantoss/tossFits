@@ -6,7 +6,7 @@ const graphql = String.raw;
 export const exportGraphQLSchema = graphQLSchemaExtension({
     typeDefs: graphql`
         type Mutation {
-            addToCart(productID: ID)
+            addToCart(productID: ID): cartItem
         }
     `
     //resolvers
