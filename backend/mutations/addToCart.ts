@@ -9,7 +9,7 @@ async function addToCart(
     ): Promise<CartItemCreateInput> {
         console.log('ADDING TO CART')
         // query current user to see if they are signed in
-        const see = 
+        const see = context.session as Session;
     };
 
 
