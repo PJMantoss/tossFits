@@ -20,7 +20,9 @@ async function addToCart(
 
         const [existingCartItem] = allCartItems;
         if(existingCartItem){
-            console.log();
+            console.log(
+                `There are ${}, increment by 1!`
+            );
         }
     };
 
