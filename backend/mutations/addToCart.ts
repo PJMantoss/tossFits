@@ -25,7 +25,7 @@ async function addToCart(
             );
             return await context.lists.CartItem.updateOne({
                 id: existingCartItem.id,
-                data: { existingCartItem.quantity: quantity + 1 },
+                data: { quantity: existingCartItem.quantity + 1 },
             });
         }
     };
