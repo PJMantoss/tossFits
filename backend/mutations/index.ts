@@ -1,7 +1,7 @@
 import { graphQLSchemaExtension } from '@keystone-next/keystone/schema';
 
 export const exportGraphQLSchema = graphQLSchemaExtension({
-    typeDefs:`
+    typeDefs: gql`
         type mutation {
             addToCart(productID: ID)
         }
