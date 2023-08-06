@@ -21,8 +21,9 @@ async function addToCart(
         const [existingCartItem] = allCartItems;
         if(existingCartItem){
             console.log(
-                `There are ${}, increment by 1!`
+                `There are already ${existingCartItem.quantity}, increment by 1!`
             );
+            return await context.lists.CartItem.updateOne();
         }
     };
 
