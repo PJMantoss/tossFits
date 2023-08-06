@@ -1,6 +1,6 @@
 import { KeystoneContext } from "@keystone-next/types";
 
-export const addToCart(
+export default function addToCart(
     root: any, 
     { productId }: { productId: String },
     context: KeystoneContext
