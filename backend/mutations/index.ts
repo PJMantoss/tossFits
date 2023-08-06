@@ -10,6 +10,10 @@ export const extendGraphqlSchema = graphQLSchemaExtension({
         }
     `,
     resolvers: {
-        Mutation
+        Mutation: {
+            addToCart: function(){
+                
+            }
+        }
     }
 });
