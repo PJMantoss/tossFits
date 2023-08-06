@@ -3,7 +3,7 @@ import { graphQLSchemaExtension } from '@keystone-next/keystone/schema';
 // fake graphql tagged template literal string
 const graphql = String.raw;
 
-export const exportGraphQLSchema = graphQLSchemaExtension({
+export const extendGraphQLSchema = graphQLSchemaExtension({
     typeDefs: graphql`
         type Mutation {
             addToCart(productID: ID): CartItem
