@@ -1,6 +1,6 @@
 import { KeystoneContext, SessionStore } from "@keystone-next/types";
 import { CartItemCreateInput } from '../.keystone/schema-types';
-import { Session } from '../type';
+import { Session } from '../types';
 
 async function addToCart(
     root: any, 
@@ -11,7 +11,7 @@ async function addToCart(
         // query current user to see if they are signed in
         const sess = context.session as Session;
         if(!sess.itemId){
-            throw new Error();
+            throw new Error('You must be signed in to do this');
         }
     };
 
