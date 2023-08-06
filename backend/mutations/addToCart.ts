@@ -19,6 +19,9 @@ async function addToCart(
         });
 
         const [existingCartItem] = allCartItems;
+        if(existingCartItem){
+            console.log();
+        }
     };
 
 
