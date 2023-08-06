@@ -8,3 +8,6 @@ async function addToCart(
     ): Promise<CartItemCreateInput>{
         console.log('ADDING TO CART')
     };
+
+
+export default addToCart;
