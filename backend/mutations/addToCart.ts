@@ -23,7 +23,7 @@ async function addToCart(
             console.log(
                 `There are already ${existingCartItem.quantity}, increment by 1!`
             );
-            return await context.lists.CartItem.updateOne();
+            return await context.lists.CartItem.updateOne({});
         }
     };
 
