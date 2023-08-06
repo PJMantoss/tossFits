@@ -13,6 +13,8 @@ async function addToCart(
         if(!sess.itemId){
             throw new Error('You must be signed in to do this');
         }
+        // query the current user's cart
+        const allCartItems = context.lists.findMany();
     };
 
 
