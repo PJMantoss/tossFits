@@ -14,7 +14,7 @@ async function addToCart(
             throw new Error('You must be signed in to do this');
         }
         // query the current user's cart
-        const allCartItems = context.lists.findMany();
+        const allCartItems = await context.lists.CartItem.findMany();
     };
 
 
