@@ -31,7 +31,8 @@ async function addToCart(
 
         return await context.lists.CartItem.createOne({
             data: {
-                product: { connect: {id: productId} }
+                product: { connect: {id: productId} },
+                user: { connect: {id: sess.itemId} },
             }
         });
     };
