@@ -29,7 +29,11 @@ async function addToCart(
             });
         }
 
-        return await context.lists.CartItem.createOne({});
+        return await context.lists.CartItem.createOne({
+            data: {
+                product: { connect: {id: productId} }
+            }
+        });
     };
 
 
