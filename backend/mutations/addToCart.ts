@@ -28,6 +28,8 @@ async function addToCart(
                 data: { quantity: existingCartItem.quantity + 1 },
             });
         }
+
+        return await context.lists.CartItem.createOne({});
     };
 
 
